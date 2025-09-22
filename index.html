@@ -357,6 +357,59 @@
       .contact-aside{ max-width:100%; width:100%; }
       .contact-aside .cta-row{ justify-content:flex-start; }
     }
+
+    /* Mobile menu initial (desktop stays as before) */
+    .mobile-menu{ display:none; border:0; background:transparent; padding:8px; border-radius:8px; cursor:pointer; }
+    .mobile-menu svg{ width:20px; height:20px; display:block }
+
+    /* Responsive adjustments */
+    @media (max-width:900px){
+      .wrap{ margin:18px auto; padding:0 16px; }
+      header{
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+      }
+      /* show mobile menu button and hide nav by default */
+      .mobile-menu{ display:inline-flex; align-self:flex-end; }
+      nav{ display:none; width:100%; flex-direction:column; gap:8px; }
+      nav.open{ display:flex; }
+      nav a{ display:block; padding:10px 12px; border-radius:10px; background:transparent; font-size:15px }
+      nav a.cta{ align-self:stretch; text-align:center }
+
+      /* Hero stacks vertically and spacing/padding reduced */
+      .hero{ grid-template-columns:1fr; gap:18px; }
+      .hero-card{ padding:20px; border-radius:14px }
+      .hero-card h1{ font-size:22px; line-height:1.12 }
+      .hero-image img{ height:220px; }
+
+      /* Cards / grids -> single column on small devices */
+      .grid{ grid-template-columns:1fr; gap:14px }
+      .packages{ grid-template-columns:1fr; gap:12px }
+      .process{ flex-direction:column; gap:12px }
+
+      /* Testimonials full width */
+      .testimonials{ gap:10px }
+      .testimonial{ min-width:0; max-width:100%; }
+
+      /* Contact: form and aside stack */
+      .contact{ grid-template-columns:1fr; }
+      .contact-aside{ max-width:100%; width:100% }
+
+      /* Form rows -> single column */
+      .form-row{ grid-template-columns: 1fr; column-gap:0; row-gap:10px; }
+
+      /* Smaller footer spacing */
+      .site-footer{ padding:20px 14px; border-radius:10px }
+      .footer-inner{ grid-template-columns:1fr; gap:12px }
+    }
+
+    @media (max-width:420px){
+      body{ font-size:15px }
+      .btn.primary, .btn.ghost{ padding:10px 12px; font-size:14px }
+      .logo{ font-size:18px }
+      .hero-card h1{ font-size:20px }
+    }
   </style>
 </head>
 <body>
@@ -369,7 +422,15 @@
         <div style="color:var(--muted);font-size:13px;margin-top:2px">IT-Analyse • Sicherheit • Service</div>
       </a>
 
-      <nav role="navigation" aria-label="Hauptnavigation">
+      <!-- mobile menu button (sichtbar auf kleinen Bildschirmen) -->
+      <button class="mobile-menu" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Menü öffnen">
+        <!-- simple hamburger icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+
+      <nav id="mainNav" role="navigation" aria-label="Hauptnavigation">
         <a href="#services">Leistungen</a>
         <a href="#process">Ablauf</a>
         <a href="#packages">Pakete</a>
@@ -649,6 +710,18 @@
     // Set year
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Mobile menu toggle
+    (function(){
+      var btn = document.getElementById('mobileMenuBtn');
+      var nav = document.getElementById('mainNav');
+      if(!btn || !nav) return;
+      btn.addEventListener('click', function(){
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+      }, {passive:true});
+    })();
+
     function scrollToContact(subject){
       var sel = document.getElementById('service');
       if(sel){ sel.value = subject; }
@@ -676,7 +749,9 @@
       var phone = document.getElementById('phone').value.trim();
       var firma = (document.getElementById('firma')||{}).value.trim();
       var position = (document.getElementById('position')||{}).value.trim();
-      var subject = document.getElementById('service').value || 'Allgemeine Anfrage';
+      // safe subject extraction (falls Feld nicht vorhanden)
+      var subjEl = document.getElementById('service');
+      var subject = (subjEl && subjEl.value) ? subjEl.value : 'Allgemeine Anfrage';
       var message = document.getElementById('message').value.trim();
       var consent = document.getElementById('consent');
 
