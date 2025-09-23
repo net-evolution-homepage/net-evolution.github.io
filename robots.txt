@@ -1,0 +1,8 @@
+# robots.txt
+# Optimiert für Google & Co.
+
+User-agent: *
+Disallow:
+
+# Sitemap
+Sitemap: https://www.net-evolution.de/sitemap.xml
