@@ -852,6 +852,52 @@
       onScroll();
     })();
   </script>
+  
+  <!-- Cookie Consent Banner -->
+<div id="cookieBanner" style="position:fixed;bottom:0;left:0;width:100%;background:#fff;border-top:1px solid #ccc;box-shadow:0 -2px 8px rgba(0,0,0,0.1);padding:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;z-index:9999;font-family: 'Inter', sans-serif;">
+  <div style="flex:1;min-width:220px;font-size:14px;color:#102027;">
+    Wir verwenden Google Analytics, um die Nutzung unserer Website zu analysieren. 
+    Ihre Daten werden nur mit Ihrer Zustimmung verarbeitet. 
+    <a href="datenschutz.html" target="_blank" style="color:#29a854;text-decoration:underline;">Mehr erfahren</a>.
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <button id="acceptCookies" style="background:#29a854;color:#fff;border:none;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:600;">Akzeptieren</button>
+    <button id="declineCookies" style="background:#eee;color:#102027;border:none;padding:10px 16px;border-radius:12px;cursor:pointer;font-weight:600;">Ablehnen</button>
+  </div>
+</div>
+
+<script>
+  // Prüfen, ob bereits Zustimmung vorliegt
+  var consent = localStorage.getItem('gaConsent');
+  if(consent==='accepted'){ loadAnalytics(); document.getElementById('cookieBanner').style.display='none'; }
+  if(consent==='declined'){ document.getElementById('cookieBanner').style.display='none'; }
+
+  document.getElementById('acceptCookies').addEventListener('click', function(){
+    localStorage.setItem('gaConsent','accepted');
+    loadAnalytics();
+    document.getElementById('cookieBanner').style.display='none';
+  });
+
+  document.getElementById('declineCookies').addEventListener('click', function(){
+    localStorage.setItem('gaConsent','declined');
+    document.getElementById('cookieBanner').style.display='none';
+  });
+
+  function loadAnalytics(){
+    // Google Analytics 4 (replace G-XXXXXXX with your ID)
+    var gtagScript = document.createElement('script');
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    gtagScript.onload = function(){
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
+    }
+  }
+</script>
 </body>
 </html>
 
