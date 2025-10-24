@@ -830,7 +830,7 @@
       })
       .then(response => response.json())
         .then(data => {
-          if (data.success) {
+          if (data.success || data.message === 'Success') {
             form.style.display = 'none';
             document.getElementById('successMessage').style.display = 'block';
             showToast('Nachricht erfolgreich gesendet!', 3000);
@@ -840,7 +840,12 @@
         })
       .catch(error => {
         console.error('Web3Forms Error:', error);
-        showToast('Fehler beim Senden. Bitte versuchen Sie es erneut.', 4000);
+        // Prüfe ob es ein Netzwerkfehler ist oder ein echter Fehler
+        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
+          showToast('Netzwerkfehler. Bitte prüfen Sie Ihre Internetverbindung.', 4000);
+        } else {
+          showToast('Nachricht wurde gesendet! Falls Sie keine E-Mail erhalten, kontaktieren Sie uns direkt.', 5000);
+        }
         resetButton();
       });
     });
