@@ -1068,14 +1068,8 @@
 
     // Lead Magnet Download Function
     function downloadChecklist() {
-      // Direct download of PDF
-      const link = document.createElement('a');
-      link.href = 'IT-Sicherheitscheckliste.pdf';
-      link.download = 'IT-Sicherheitscheckliste.pdf';
-      link.target = '_blank';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Open HTML checklist in new tab for printing/downloading as PDF
+      window.open('IT-Sicherheitscheckliste.html', '_blank');
     }
 
     // Make downloadChecklist globally available

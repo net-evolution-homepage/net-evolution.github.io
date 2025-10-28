@@ -414,8 +414,17 @@
   <button class="print-btn no-print" onclick="window.print()">🖨️ Als PDF drucken</button>
 
   <script>
-    // Print dialog opens when page loads (optional - you can remove this if you don't want it)
-    // window.onload = function() { setTimeout(() => window.print(), 1000); };
+    // Automatically open print dialog when page loads
+    window.onload = function() { 
+      setTimeout(() => {
+        window.print();
+        // Show message after print dialog
+        setTimeout(() => {
+          document.querySelector('.print-btn').textContent = '✓ Bereit als PDF gespeichert!';
+          document.querySelector('.print-btn').style.background = '#22c55e';
+        }, 100);
+      }, 500); 
+    };
   </script>
 </body>
 </html>
