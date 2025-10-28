@@ -96,7 +96,7 @@
     .hero-card h1{font-size:38px;line-height:1.15;color:#072b26;margin-bottom:10px;font-weight:700;letter-spacing:-0.3px}
     .lead{font-size:17px;color:var(--muted);margin-bottom:20px;line-height:1.6}
     .actions{display:flex;gap:14px;margin-top:22px}
-    .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:12px;border:0;font-weight:600;cursor:pointer;text-decoration:none;font-size:14px;transition:all 0.3s ease}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:12px;border:0;font-weight:600;cursor:pointer;text-decoration:none;font-size:13px;transition:all 0.3s ease}
     .btn.primary{
       background:linear-gradient(135deg, var(--green), #16a56f);
       color: white;
@@ -181,6 +181,8 @@
       transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position:relative;
       overflow:hidden;
+      display:flex;
+      flex-direction:column;
     }
     .pkg::before{
       content:'';
@@ -202,8 +204,9 @@
       border-color:rgba(41,168,84,0.2);
     }
     .price{font-size:20px;font-weight:700;color:var(--green);margin:10px 0;text-shadow:0 1px 2px rgba(41,168,84,0.1)}
-    .pkg ul{padding-left:18px;margin:10px 0;color:var(--muted)}
+    .pkg ul{padding-left:18px;margin:10px 0;color:var(--muted);flex-grow:1}
     .pkg li{margin:5px 0;font-size:13px;line-height:1.4}
+    .pkg .btn{margin-top:auto}
 
     .testimonials{
       display:flex;
@@ -1147,8 +1150,8 @@
   <!-- Cookie Consent Banner -->
   <div id="cookieBanner" style="position:fixed;bottom:0;left:0;width:100%;background:#fff;border-top:1px solid #ccc;box-shadow:0 -2px 8px rgba(0,0,0,0.1);padding:16px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;z-index:9999;font-family: 'Inter', sans-serif;">
     <div style="flex:1;min-width:220px;font-size:14px;color:#102027;">
-      Wir verwenden Google Analytics, um die Nutzung unserer Website zu analysieren. 
-      Ihre Daten werden nur mit Ihrer Zustimmung verarbeitet. 
+      Diese Website nutzt Google Fonts für eine bessere Darstellung. 
+      Ihre Daten werden nur mit Ihrer Zustimmung für Analytics verarbeitet. 
       <a href="datenschutz.html" target="_blank" style="color:#29a854;text-decoration:underline;">Mehr erfahren</a>.
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -1174,17 +1177,9 @@
   });
 
   function loadAnalytics(){
-    var gtagScript = document.createElement('script');
-    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
-    gtagScript.async = true;
-    document.head.appendChild(gtagScript);
-
-    gtagScript.onload = function(){
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
-    }
+    // Google Analytics wurde noch nicht konfiguriert
+    // Bei Bedarf können Sie hier Ihre echte GA4-Tracking-ID eintragen
+    console.log('Analytics wurde akzeptiert, aber noch nicht konfiguriert');
   }
 </script>
 </body>
