@@ -74,15 +74,17 @@
     nav a:focus{box-shadow:var(--focus);outline:none}
     .mobile-menu{display:none}
 
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:start;margin-bottom:30px}
+    .hero{display:block;margin-bottom:60px}
     .hero-card{
-      padding:40px;border-radius:18px;
+      padding:50px 40px;border-radius:18px;
       background:linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,250,252,0.95));
       backdrop-filter:blur(25px);
       border:1px solid rgba(255,255,255,0.4);
       box-shadow:0 16px 48px rgba(41,168,84,0.12), 0 6px 24px rgba(0,0,0,0.08);
       position:relative;
       overflow:hidden;
+      max-width:800px;
+      margin:0 auto;
     }
     .hero-card::before{
       content:'';
@@ -93,9 +95,9 @@
       height:4px;
       background:linear-gradient(90deg, var(--green), #16a56f, #059669);
     }
-    .hero-card h1{font-size:38px;line-height:1.15;color:#072b26;margin-bottom:10px;font-weight:700;letter-spacing:-0.3px}
-    .lead{font-size:17px;color:var(--muted);margin-bottom:20px;line-height:1.6}
-    .actions{display:flex;gap:14px;margin-top:22px}
+    .hero-card h1{font-size:42px;line-height:1.15;color:#072b26;margin-bottom:16px;font-weight:700;letter-spacing:-0.3px;text-align:center}
+    .lead{font-size:18px;color:var(--muted);margin-bottom:32px;line-height:1.7;text-align:center;max-width:700px;margin-left:auto;margin-right:auto}
+    .actions{display:flex;gap:14px;margin-top:32px;justify-content:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 16px;border-radius:12px;border:0;font-weight:600;cursor:pointer;text-decoration:none;font-size:13px;transition:all 0.3s ease}
     .btn.primary{
       background:linear-gradient(135deg, var(--green), #16a56f);
@@ -144,7 +146,6 @@
     }
     .pill:hover { transform: translateY(-4px) scale(1.02); box-shadow: 0 8px 20px rgba(15,23,36,0.06); }
 
-    .quick{padding:22px;border-radius:14px;background:var(--card);box-shadow:var(--shadow)}
     .small-note{font-size:14px;color:var(--muted)}
 
     .hero-image{
@@ -171,7 +172,7 @@
     .card:hover .thumb img { transform: scale(1.04); }
 
 
-    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:34px}
+    .packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:60px}
     .pkg{
       background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,250,252,0.9));
       backdrop-filter:blur(15px);
@@ -408,67 +409,6 @@
     .footer-bottom a:hover{text-decoration:underline}
 
 
-    /* Lead Magnet Styles */
-    .lead-magnet-card{ 
-      background:linear-gradient(135deg, rgba(41,168,84,0.06), rgba(22,165,111,0.04));
-      border:1px solid rgba(41,168,84,0.15); border-radius:18px; padding:32px;
-      text-align:center; position:relative; overflow:hidden;
-      margin-top:24px;
-      box-shadow:0 8px 32px rgba(41,168,84,0.1), 0 3px 12px rgba(0,0,0,0.04);
-      backdrop-filter:blur(15px);
-    }
-    .lead-magnet-card::before{
-      content:''; position:absolute; top:0; left:0; right:0; height:4px;
-      background:linear-gradient(90deg, var(--green), #16a56f, #059669);
-    }
-    .lead-magnet-card::after{
-      content:''; position:absolute; top:-50%; right:-50%; width:100%; height:100%;
-      background:radial-gradient(circle, rgba(41,168,84,0.1) 0%, transparent 70%);
-      pointer-events:none;
-    }
-    .lead-magnet-content h3{ 
-      color:#1e293b; margin:0 0 16px 0; font-size:22px; font-weight:700; 
-      line-height:1.3;
-    }
-    .lead-magnet-content p{ 
-      color:#64748b; margin:0 0 22px 0; font-size:15px; line-height:1.7; 
-      max-width:500px; margin-left:auto; margin-right:auto;
-    }
-    .checklist-preview{ 
-      list-style:none; padding:0; margin:0 0 20px 0; text-align:left; 
-      display:inline-block; background:rgba(255,255,255,0.9); padding:18px; border-radius:14px;
-      box-shadow:0 6px 20px rgba(0,0,0,0.06); max-width:350px;
-      backdrop-filter:blur(15px);
-      border:1px solid rgba(255,255,255,0.4);
-    }
-    .checklist-preview li{ 
-      color:#1e293b; margin:7px 0; font-weight:500; 
-      display:flex; align-items:center; gap:9px;
-      font-size:14px;
-    }
-    .checklist-preview li::before{ content:'✓'; color:var(--green); font-weight:700; font-size:14px; }
-    
-    /* Download Button */
-    .download-btn {
-      font-size:15px;
-      padding:14px 24px;
-      border-radius:14px;
-      box-shadow:0 8px 24px rgba(41,168,84,0.3);
-      transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .download-btn:hover {
-      transform:translateY(-2px);
-      box-shadow:0 12px 32px rgba(41,168,84,0.4);
-    }
-    .download-btn svg {
-      transition:transform 0.3s ease;
-    }
-    .download-btn:hover svg {
-      transform:translateY(2px);
-    }
 
     /* WhatsApp Button */
     .whatsapp-button{
@@ -506,8 +446,8 @@
 
     .contact{
       display: grid;
-      grid-template-columns: 1fr 360px; /* Formular | Aside */
-      gap: 18px;
+      grid-template-columns: 1fr 280px; /* Formular | Aside */
+      gap: 24px;
       align-items: start;
     }
     .contact form{ 
@@ -533,9 +473,9 @@
     /* Kontakt-Aside (gestaltet, feste Ziel-Breite) */
     .contact-aside{
       width:100%;
-      max-width:360px;
+      max-width:280px;
       box-sizing:border-box;
-      padding:18px;
+      padding:24px;
       border-radius:12px;
       background:linear-gradient(180deg,#ffffff,#fbfcfd);
       box-shadow:var(--shadow);
@@ -638,10 +578,12 @@
         to { opacity:1; transform:translateY(0); }
       }
 
-      .hero{ grid-template-columns:1fr; gap:18px; }
-      .hero-card{ padding:20px; border-radius:14px }
-      .hero-card h1{ font-size:22px; line-height:1.12 }
-      .hero-image img{ height:220px; }
+      .hero{ display:block; }
+      .hero-card{ padding:32px 24px; border-radius:14px }
+      .hero-card h1{ font-size:28px; line-height:1.2 }
+      .lead{ font-size:16px; margin-bottom:24px; }
+      .actions{ flex-direction:column; width:100%; }
+      .actions .btn{ width:100%; justify-content:center; }
 
       .grid{ grid-template-columns:1fr; gap:14px }
       .packages{ grid-template-columns:1fr; gap:12px }
@@ -656,16 +598,6 @@
 
       .site-footer{ padding:20px 14px; border-radius:10px }
       .footer-inner{ grid-template-columns:1fr; gap:12px }
-      
-      
-      /* Lead Magnet responsive */
-      .lead-magnet-card{ padding:24px 20px; margin-top:16px; }
-      .lead-magnet-content h3{ font-size:20px; }
-      .lead-magnet-content p{ font-size:15px; margin-bottom:20px; }
-      .checklist-preview{ padding:20px; max-width:100%; }
-      .checklist-preview li{ font-size:14px; margin:8px 0; }
-      .download-btn{ padding:12px 20px; font-size:14px; }
-      .download-btn svg{ width:16px; height:16px; margin-right:8px; }
       
       /* WhatsApp Button responsive */
       .whatsapp-button{ bottom:16px; right:16px; }
@@ -714,70 +646,18 @@
     <main id="maincontent" role="main" tabindex="-1">
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-card reveal" data-reveal>
-          <h1 id="hero-heading">IT-Lösungen für Unternehmen & Privatkunden</h1>
-          <p class="lead">Professionelle Websites, IT-Schulungen und Gesamtsysteme für Ihr Business. IT-Support, Schulungen und Netzwerkberatung für Privatpersonen in <strong>Bad Kreuznach</strong>, <strong>Bingen</strong> & <strong>Stromberg</strong>.</p>
-
-          <div class="service-highlights" aria-hidden="false" role="list">
-            <div class="pill" role="listitem">Websites</div>
-            <div class="pill" role="listitem">IT-Schulungen</div>
-            <div class="pill" role="listitem">Gesamtsysteme</div>
-            <div class="pill" role="listitem">IT-Support</div>
-            <div class="pill" role="listitem">Gebäudenetzwerkberatung</div>
-          </div>
+          <h1 id="hero-heading">IT-Lösungen für Ihr Business</h1>
+          <p class="lead">Professionelle Websites, IT-Schulungen und maßgeschneiderte Gesamtsysteme für Unternehmen in <strong>Bad Kreuznach</strong>, <strong>Bingen</strong> & <strong>Stromberg</strong>.</p>
 
           <div class="actions" role="group" aria-label="Hauptaktionen">
             <a class="btn primary" href="#contact">Jetzt Termin anfragen</a>
             <a class="btn ghost" href="#packages">Unsere Leistungen</a>
           </div>
         </div>
-
-        <aside class="quick reveal" data-reveal aria-labelledby="quick-title">
-          <h3 id="quick-title">Schnellkontakt</h3>
-          <p style="margin-bottom:12px"><strong>Net-Evolution</strong><br>IT-Lösungen für Ihr Business</p>
-          
-          <div style="margin-top:12px">
-            <div class="small-note">Telefon</div>
-            <a href="tel:+4915679708019" style="font-weight:600;color:var(--green);text-decoration:none">+49 15679 708019</a>
-            <div class="small-note" style="margin-top:8px">Öffnungszeiten</div>
-            <div style="font-weight:600">Mo-Fr 09:00-17:00</div>
-            <div class="small-note" style="margin-top:8px">Servicegebiet</div>
-            <div style="font-size:13px">Bad Kreuznach, Bingen, Stromberg</div>
-          </div>
-        </aside>
       </section>
 
-
-
-    <section id="lead-magnet" aria-labelledby="lead-magnet-title">
-      <h2 id="lead-magnet-title" style="font-size:20px;margin-bottom:12px">Kostenlose IT-Checkliste & Erstberatung</h2>
-      <div class="lead-magnet-card reveal" data-reveal>
-        <div class="lead-magnet-content">
-          <h3>Ist Ihr System sicher? - Kostenlose Checkliste</h3>
-          <p>Laden Sie unsere kostenlose IT-Sicherheitscheckliste herunter und prüfen Sie selbst, ob Ihr System optimal geschützt ist.</p>
-          <ul class="checklist-preview">
-            <li>✓ Passwort-Sicherheit prüfen</li>
-            <li>✓ Backup-Status überprüfen</li>
-            <li>✓ Software-Updates kontrollieren</li>
-            <li>✓ WLAN-Sicherheit testen</li>
-            <li>✓ Antivirus-Status prüfen</li>
-          </ul>
-          <div style="margin-top:8px">
-            <button class="btn primary download-btn" onclick="downloadChecklist()">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7,10 12,15 17,10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              PDF kostenlos herunterladen
-            </button>
-          </div>
-          <p class="small-note" style="margin-top:14px">Keine E-Mail erforderlich • Sofortiger Download • 100% kostenlos</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="packages" aria-labelledby="packages-title">
-        <h2 id="packages-title" style="font-size:20px;margin-bottom:12px">Unsere Dienstleistungen</h2>
+    <section id="packages" aria-labelledby="packages-title" style="margin-top:60px">
+        <h2 id="packages-title" style="font-size:28px;margin-bottom:24px;text-align:center;font-weight:700">Unsere Dienstleistungen</h2>
         <div class="packages" role="list">
           <div class="pkg reveal" data-reveal role="listitem" aria-labelledby="pkg-priv"><div id="pkg-priv"><strong>Privatkunden</strong></div><div class="price">Individuelle Beratung</div><ul><li>Allgemeiner IT-Support</li><li>Individuelle Schulungen</li><li>Gebäudenetzwerkverlegungsberatung</li></ul><button class="btn primary" onclick="scrollToContact('Privatkunden - IT-Support')">Anfragen</button></div>
 
@@ -790,8 +670,8 @@
 
 
 
-      <section id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title" style="font-size:20px;margin-bottom:12px">Kontakt & Termin</h2>
+      <section id="contact" aria-labelledby="contact-title" style="margin-top:60px">
+        <h2 id="contact-title" style="font-size:28px;margin-bottom:24px;text-align:center;font-weight:700">Kontakt & Termin</h2>
         <div class="contact">
           <form id="contactForm" class="reveal" data-reveal action="https://api.web3forms.com/submit" method="POST" aria-label="Kontaktformular" novalidate>
             <div class="form-row">
@@ -858,31 +738,21 @@
             <p class="helper">Wir melden uns in der Regel innerhalb von 1-2 Werktagen. Für dringende Notfälle: <a href="tel:+4915679708019" class="phone">+49 15679 708019</a>.</p>
           </form>
 
-          <!-- Ersetztes, aufgeräumtes Aside -->
+          <!-- Vereinfachtes Aside -->
           <aside class="reveal contact-aside" data-reveal aria-label="Kontaktinformationen">
-            <h4>Servicegebiet</h4>
-            <p class="small-note">Bad Kreuznach · Bingen · Stromberg · Umgebung</p>
-
-            <h4 style="margin-top:16px;margin-bottom:6px">Unsere Services</h4>
-            <ul class="service-list" aria-hidden="false">
-              <li><strong>Für Unternehmen:</strong> Websites, IT-Schulungen, Gesamtsysteme</li>
-              <li><strong>Für Privatkunden:</strong> IT-Support, Schulungen, Gebäudenetzwerkberatung</li>
-            </ul>
-
-            <div class="meta" aria-hidden="false">
+            <h4>Kontakt</h4>
+            <div class="meta" aria-hidden="false" style="margin-top:12px">
               <div>
-                <div class="small-note">Schnelle Fragen</div>
+                <div class="small-note">Telefon</div>
                 <a class="phone" href="tel:+4915679708019">+49 15679 708019</a>
               </div>
               <div>
-                <div class="small-note">Adresse</div>
-                <div class="small-note">Weinbergstraße 17<br>55452 Dorsheim</div>
+                <div class="small-note">Servicegebiet</div>
+                <div class="small-note">Bad Kreuznach · Bingen · Stromberg</div>
               </div>
             </div>
-
-            <div class="cta-row" role="group" aria-label="Kontaktaktionen">
+            <div class="cta-row" role="group" aria-label="Kontaktaktionen" style="margin-top:16px">
               <a class="btn primary" href="tel:+4915679708019" aria-label="Jetzt anrufen">Jetzt anrufen</a>
-              <a class="btn ghost" href="#contact" aria-label="Termin anfragen">Termin anfragen</a>
             </div>
           </aside>
         </div>
@@ -1081,14 +951,6 @@
     }
 
 
-    // Lead Magnet Download Function
-    function downloadChecklist() {
-      // Open HTML checklist in new tab for printing/downloading as PDF
-      window.open('IT-Sicherheitscheckliste.html', '_blank');
-    }
-
-    // Make downloadChecklist globally available
-    window.downloadChecklist = downloadChecklist;
 
     (function(){
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
