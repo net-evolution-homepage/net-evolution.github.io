@@ -1033,9 +1033,15 @@
       .then(response => response.json())
         .then(data => {
           if (data.success || data.message === 'Success') {
-            form.style.display = 'none';
+            // Formular zurücksetzen, aber sichtbar lassen
+            form.reset();
+            document.getElementById('consent').checked = false;
+            resetButton();
+            // Erfolgsmeldung anzeigen
             document.getElementById('successMessage').style.display = 'block';
             showToast('Nachricht erfolgreich gesendet!', 3000);
+            // Zum Kontaktformular scrollen, damit die Erfolgsmeldung sichtbar ist
+            document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});
           } else {
             throw new Error(data.message || 'Unknown error');
           }
@@ -1063,9 +1069,15 @@
     }
 
     if (window.location.search.includes('success=true')) {
-      document.getElementById('contactForm').style.display = 'none';
+      // Formular sichtbar lassen und zurücksetzen
+      var contactForm = document.getElementById('contactForm');
+      contactForm.reset();
+      document.getElementById('consent').checked = false;
+      // Erfolgsmeldung anzeigen
       document.getElementById('successMessage').style.display = 'block';
       showToast('Nachricht erfolgreich gesendet!', 3000);
+      // Zum Kontaktformular scrollen
+      document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});
     }
 
 
