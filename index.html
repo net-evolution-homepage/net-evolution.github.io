@@ -667,11 +667,10 @@
 
       <nav id="mainNav" role="navigation" aria-label="Hauptnavigation">
         <div class="nav-links">
-          <a href="#packages">Leistungen</a>
-          <a href="#contact">Kontakt</a>
+          <a href="leistungen.html">Leistungen</a>
+          <a href="kontakt.html">Kontakt</a>
           <a href="impressum.html">Impressum</a>
         </div>
-        <a href="#contact" class="cta">Termin anfragen</a>
       </nav>
     </header>
 
@@ -680,127 +679,13 @@
         <div class="hero-card reveal" data-reveal>
           <h1 id="hero-heading">IT-Lösungen für Ihr Business</h1>
           <p class="lead">Websites, IT-Schulungen & Gesamtsysteme in <strong>Bad Kreuznach</strong>, <strong>Bingen</strong> & <strong>Stromberg</strong>.</p>
-        </div>
-      </section>
-
-    <section id="packages" aria-labelledby="packages-title" style="margin-top:60px">
-        <h2 id="packages-title" style="font-size:28px;margin-bottom:24px;text-align:center;font-weight:700">Unsere Dienstleistungen</h2>
-        <div class="packages" role="list">
-          <div class="pkg reveal" data-reveal role="listitem" aria-labelledby="pkg-priv"><div id="pkg-priv"><strong>Privatkunden</strong></div><div class="price">Individuelle Beratung</div><ul><li>Allgemeiner IT-Support</li><li>Individuelle Schulungen</li><li>Gebäudenetzwerkverlegungsberatung</li></ul><button class="btn primary" onclick="scrollToContact('Privatkunden - IT-Support')">Anfragen</button></div>
-
-          <div class="pkg reveal" data-reveal role="listitem" aria-labelledby="pkg-kmu"><div id="pkg-kmu"><strong>Websites</strong></div><div class="price">Maßgeschneidert für Ihr Business</div><ul><li>Professionelle Websites</li><li>Individuelles Design</li><li>Suchmaschinenoptimierung</li></ul><button class="btn primary" onclick="scrollToContact('Websites für Unternehmen')">Anfragen</button></div>
-
-          <div class="pkg reveal" data-reveal role="listitem" aria-labelledby="pkg-prem"><div id="pkg-prem"><strong>IT-Schulungen & Gesamtsysteme</strong></div><div class="price">Komplettlösungen & Training</div><ul><li>Maßgeschneiderte IT-Schulungen</li><li>Planung kompletter IT-Systeme</li><li>Umsetzung & Wartung</li></ul><button class="btn primary" onclick="scrollToContact('IT-Schulungen & Gesamtsysteme')">Anfragen</button></div>
-        </div>
-        <p class="small-note">Jedes Projekt beginnt mit einem kurzen, kostenlosen Erstgespräch.</p>
-      </section>
-
-
-
-      <section id="contact" aria-labelledby="contact-title" style="margin-top:60px">
-        <h2 id="contact-title" style="font-size:28px;margin-bottom:24px;text-align:center;font-weight:700">Kontakt & Termin</h2>
-        <div class="contact">
-          <form id="contactForm" class="reveal" data-reveal action="https://api.web3forms.com/submit" method="POST" aria-label="Kontaktformular" novalidate>
-            <div class="form-row">
-              <div>
-                <label class="form-label" for="vorname">Vorname *</label>
-                <input class="input" type="text" id="vorname" name="vorname" required aria-required="true" placeholder="Vorname">
-              </div>
-              <div>
-                <label class="form-label" for="nachname">Nachname *</label>
-                <input class="input" type="text" id="nachname" name="nachname" required aria-required="true" placeholder="Nachname">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label class="form-label" for="email">E‑Mail *</label>
-                <input class="input" type="email" id="email" name="email" required aria-required="true" placeholder="name@beispiel.de">
-              </div>
-              <div>
-                <label class="form-label" for="phone">Telefon (optional)</label>
-                <input class="input" type="text" id="phone" name="phone" placeholder="+49 ...">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div>
-                <label class="form-label" for="firma">Firma (optional)</label>
-                <input class="input" type="text" id="firma" name="firma" placeholder="Firma / Organisation">
-              </div>
-              <div>
-                <label class="form-label" for="position">Position (Für Firmen)</label>
-                <input class="input" type="text" id="position" name="position" placeholder="z. B. Inhaber, IT‑Leiter">
-              </div>
-            </div>
-
-            <label class="form-label" for="message">Nachricht *</label>
-            <textarea id="message" class="input" name="message" required aria-required="true" placeholder="Beschreibe kurz dein Anliegen / Wunschzeitraum"></textarea>
-            
-            <input type="hidden" name="access_key" value="b0b5dedc-48fb-4572-aa38-dd9a26828a96">
-            <input type="hidden" name="subject" value="Neue Anfrage von Net-Evolution Website">
-            <input type="hidden" name="from_name" value="Net-Evolution Contact Form">
-            <input type="hidden" name="redirect" value="true">
-            <input type="hidden" name="redirect_url" value="https://net-evolution.github.io/?success=true">
-            <div style="margin-top:10px">
-              <label style="display:flex;align-items:center;gap:10px;font-size:14px">
-                <input id="consent" type="checkbox" required aria-required="true" style="width:18px;height:18px">
-                <span>Ich stimme der Verarbeitung meiner Daten gemäß der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.</span>
-              </label>
-            </div>
-
-            <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
-              <button class="btn primary" type="submit" id="submitBtn">
-                <span class="btn-text">Anfrage senden</span>
-                <span class="btn-loading" style="display:none;">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite;">
-                    <path d="M21 12a9 9 0 11-6.219-8.56"/>
-                  </svg>
-                  Wird gesendet...
-                </span>
-              </button>
-              <a class="btn ghost" href="mailto:info@net-evolution.de?subject=Anfrage%20Net-Evolution">Per E‑Mail</a>
-            </div>
-
-            <p class="helper">Wir melden uns in der Regel innerhalb von 1-2 Werktagen. Für dringende Notfälle: <a href="tel:+4915679708019" class="phone">+49 15679 708019</a>.</p>
-          </form>
-
-          <!-- Vereinfachtes Aside -->
-          <aside class="reveal contact-aside" data-reveal aria-label="Kontaktinformationen">
-            <h4>Schnellkontakt</h4>
-            <div style="margin-top:20px">
-              <a class="phone-link" href="tel:+4915679708019" aria-label="Anrufen">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:10px;flex-shrink:0">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                </svg>
-                <span>+49 15679 708019</span>
-              </a>
-            </div>
-            <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(41,168,84,0.1)">
-              <div class="small-note" style="margin-bottom:8px">Servicegebiet</div>
-              <div style="font-size:14px;color:var(--muted);line-height:1.6">Bad Kreuznach<br>Bingen<br>Stromberg</div>
-            </div>
-          </aside>
-        </div>
-
-        <!-- Success Message -->
-        <div id="successMessage" class="success-message" style="display:none;">
-          <div class="success-content">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22,4 12,14.01 9,11.01"/>
-            </svg>
-            <div>
-              <h3>Vielen Dank für Ihre Anfrage!</h3>
-              <p>Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 1-2 Werktagen bei Ihnen.</p>
-            </div>
+          <div class="actions" role="group" aria-label="Hauptaktionen" style="margin-top:18px;justify-content:center">
+            <a class="btn primary" href="kontakt.html">Termin anfragen</a>
           </div>
         </div>
-
-        <!-- toast / live region -->
-        <div id="toast" class="toast" role="status" aria-live="polite">Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.</div>
-        <div aria-live="polite" aria-atomic="true" style="position:absolute;left:-9999px" id="sr-announcer"></div>
       </section>
+
+    <!-- Hinweis: Leistungen und Kontakt wurden auf eigene Seiten verschoben -->
     </main>
 
     <!-- Footer: mehr Infos, Logo, Kontakt, Links -->
@@ -884,97 +769,7 @@
       var sr = document.getElementById('sr-announcer'); if(sr) sr.textContent = msg;
     }
 
-    // Web3Forms Form Handling
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      var submitBtn = document.getElementById('submitBtn');
-      var btnText = submitBtn.querySelector('.btn-text');
-      var btnLoading = submitBtn.querySelector('.btn-loading');
-      var form = this;
-      
-      submitBtn.disabled = true;
-      btnText.style.display = 'none';
-      btnLoading.style.display = 'flex';
-      
-      var vorname = document.getElementById('vorname').value.trim();
-      var nachname = document.getElementById('nachname').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var consent = document.getElementById('consent');
-      
-      if (!vorname || !nachname) {
-        showToast('Bitte geben Sie Vorname und Nachname an.', 3200);
-        resetButton();
-        return;
-      }
-      if (!email) {
-        showToast('Bitte geben Sie eine gültige E‑Mail an.', 3200);
-        resetButton();
-        return;
-      }
-      if (!consent.checked) {
-        showToast('Bitte bestätigen Sie die Datenschutzerklärung.', 3500);
-        resetButton();
-        return;
-      }
-      
-      // Submit form to Web3Forms
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json'
-        }
-      })
-      .then(response => response.json())
-        .then(data => {
-          if (data.success || data.message === 'Success') {
-            // Formular zurücksetzen, aber sichtbar lassen
-            form.reset();
-            document.getElementById('consent').checked = false;
-            resetButton();
-            // Erfolgsmeldung anzeigen
-            document.getElementById('successMessage').style.display = 'block';
-            showToast('Nachricht erfolgreich gesendet!', 3000);
-            // Zum Kontaktformular scrollen, damit die Erfolgsmeldung sichtbar ist
-            document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});
-          } else {
-            throw new Error(data.message || 'Unknown error');
-          }
-        })
-      .catch(error => {
-        console.error('Web3Forms Error:', error);
-        // Prüfe ob es ein Netzwerkfehler ist oder ein echter Fehler
-        if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-          showToast('Netzwerkfehler. Bitte prüfen Sie Ihre Internetverbindung.', 4000);
-        } else {
-          showToast('Nachricht wurde gesendet! Falls Sie keine E-Mail erhalten, kontaktieren Sie uns direkt.', 5000);
-        }
-        resetButton();
-      });
-    });
-
-    function resetButton() {
-      var submitBtn = document.getElementById('submitBtn');
-      var btnText = submitBtn.querySelector('.btn-text');
-      var btnLoading = submitBtn.querySelector('.btn-loading');
-      
-      submitBtn.disabled = false;
-      btnText.style.display = 'inline-flex';
-      btnLoading.style.display = 'none';
-    }
-
-    if (window.location.search.includes('success=true')) {
-      // Formular sichtbar lassen und zurücksetzen
-      var contactForm = document.getElementById('contactForm');
-      contactForm.reset();
-      document.getElementById('consent').checked = false;
-      // Erfolgsmeldung anzeigen
-      document.getElementById('successMessage').style.display = 'block';
-      showToast('Nachricht erfolgreich gesendet!', 3000);
-      // Zum Kontaktformular scrollen
-      document.getElementById('contact').scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
+    // Kontakt & Leistungen befinden sich auf eigenen Seiten
 
 
 
