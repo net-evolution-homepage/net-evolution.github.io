@@ -575,35 +575,50 @@
         flex-shrink:0;
       }
       nav{ 
-        display:none; 
-        width:100%; 
+        position:fixed;
+        top:68px;
+        right:16px;
+        width:78%;
+        max-width:260px;
+        display:flex; 
         flex-direction:column; 
-        gap:6px; 
-        background:transparent;
-        border:0;
-        box-shadow:none;
-        padding:4px 0;
-        margin-top:6px;
-        animation:slideDown 0.3s ease;
+        gap:8px; 
+        background:rgba(255,255,255,0.97);
+        border:1px solid rgba(0,0,0,0.05);
+        box-shadow:0 20px 40px rgba(0,0,0,0.18);
+        padding:18px 18px 16px;
+        margin-top:0;
         justify-content:flex-start;
         order:3;
+        z-index:1200;
+        border-radius:18px;
+        transform:translateX(120%);
+        opacity:0;
+        pointer-events:none;
+        transition:transform 0.32s ease, opacity 0.32s ease;
       }
-      nav.open{ display:flex; }
+      nav.open{ 
+        transform:translateX(0);
+        opacity:1;
+        pointer-events:auto;
+      }
       nav .nav-links{
         display:flex;
         flex-direction:column;
-        gap:2px;
+        gap:6px;
         width:100%;
+        align-items:flex-end;
       }
       nav a{ 
         display:block; 
-        padding:11px 12px; 
-        border-radius:8px; 
-        background:transparent; 
+        padding:10px 12px; 
+        border-radius:10px; 
+        background:transparent;
         font-size:15px;
         margin:0;
         transition:all 0.25s ease;
-        width:auto;
+        width:100%;
+        text-align:right;
       }
       nav a:hover{
         background:rgba(41,168,84,0.08);

@@ -79,33 +79,48 @@
       }
       .mobile-menu{ display:inline-flex; align-items:center; justify-content:center; }
       nav{
-        display:none;
-        width:100%;
-        order:3;
-        margin-top:6px;
+        position:fixed;
+        top:68px;
+        right:16px;
+        width:78%;
+        max-width:260px;
+        display:flex;
         flex-direction:column;
-        gap:6px;
-        background:transparent;
-        border:0;
-        box-shadow:none;
-        padding:4px 0;
-        animation:slideDown 0.3s ease;
+        gap:8px;
+        background:rgba(255,255,255,0.97);
+        border:1px solid rgba(0,0,0,0.05);
+        box-shadow:0 20px 40px rgba(0,0,0,0.18);
+        padding:18px 18px 16px;
+        margin-top:0;
         justify-content:flex-start;
+        border-radius:18px;
+        transform:translateX(120%);
+        opacity:0;
+        pointer-events:none;
+        transition:transform 0.32s ease, opacity 0.32s ease;
+        order:3;
+        z-index:1200;
       }
-      nav.open{ display:flex; }
+      nav.open{
+        transform:translateX(0);
+        opacity:1;
+        pointer-events:auto;
+      }
       nav .nav-links{
         flex-direction:column;
         width:100%;
-        gap:2px;
+        gap:6px;
+        align-items:flex-end;
       }
       nav a{
         font-size:15px;
-        padding:11px 12px;
+        padding:10px 12px;
         display:block;
-        width:auto;
+        width:100%;
         margin:0;
-        border-radius:8px;
+        border-radius:10px;
         transition:all 0.25s ease;
+        text-align:right;
       }
       nav a:hover{
         background:rgba(41,168,84,0.08);
