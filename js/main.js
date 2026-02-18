@@ -5,7 +5,7 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Hintergrund reagiert ergonomisch auf Cursor (nur bei erlaubter Bewegung)
+  // Hintergrund animiert flüssig zur Cursor-Position (nur bei erlaubter Bewegung)
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var futurBg = document.getElementById('futurBg');
   if (!futurBg) return;
@@ -20,14 +20,19 @@
     if (raf) return;
     raf = requestAnimationFrame(function tick() {
       raf = null;
-      mouseX += (targetX - mouseX) * 0.06;
-      mouseY += (targetY - mouseY) * 0.06;
+      mouseX += (targetX - mouseX) * 0.12;
+      mouseY += (targetY - mouseY) * 0.12;
       futurBg.style.setProperty('--mouse-x', String(mouseX.toFixed(4)));
       futurBg.style.setProperty('--mouse-y', String(mouseY.toFixed(4)));
-      if (Math.abs(targetX - mouseX) > 0.001 || Math.abs(targetY - mouseY) > 0.001) raf = requestAnimationFrame(tick);
+      if (Math.abs(targetX - mouseX) > 0.0005 || Math.abs(targetY - mouseY) > 0.0005) raf = requestAnimationFrame(tick);
     });
   }
   document.addEventListener('mousemove', updateMouse, { passive: true });
+  // Initiale Position bei Touch/ohne Maus: Mitte
+  window.addEventListener('load', function() {
+    futurBg.style.setProperty('--mouse-x', '0');
+    futurBg.style.setProperty('--mouse-y', '0');
+  }, { passive: true });
 
   // Mobile-Menü
   var btn = document.getElementById('mobileMenuBtn');

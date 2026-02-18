@@ -1,20 +1,20 @@
 /* Rechtliche Seiten: AGB, Impressum, Datenschutz */
 main{ padding: 24px 0 40px; min-height: 50vh; }
 .breadcrumb{
-  background:rgba(41,168,84,0.08); padding:8px 12px; border-radius:8px;
+  background:rgba(41,168,84,0.08); padding:8px 12px; border-radius:var(--radius-sm);
   font-size:14px; margin-bottom:20px; color:var(--muted);
 }
 .breadcrumb a{ color:var(--green); text-decoration:none; }
 .breadcrumb a:hover{ text-decoration:underline; }
 .main-content{
-  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,251,252,0.98));
-  padding:44px; border-radius:20px; box-shadow:var(--shadow);
-  border:1px solid rgba(41,168,84,0.22); backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.96);
+  padding:44px; border-radius:var(--radius-lg); box-shadow:var(--shadow-card);
+  border:1px solid var(--card-border); backdrop-filter:blur(20px);
 }
-.main-content h1{ margin-top:0; color:var(--green); font-size:32px; line-height:1.1; }
-.main-content h2{ margin-top:28px; color:var(--muted); font-size:20px; font-weight:600; }
-.main-content h3{ margin-top:20px; color:var(--muted); font-size:16px; font-weight:600; }
-.main-content p, .main-content li{ line-height:1.6; color:#102027; }
+.main-content h1{ margin-top:0; color:var(--green); font-size:32px; line-height:1.1; font-family: "Orbitron", sans-serif; }
+.main-content h2{ margin-top:28px; color:var(--text-primary); font-size:20px; font-weight:600; }
+.main-content h3{ margin-top:20px; color:var(--text-primary); font-size:16px; font-weight:600; }
+.main-content p, .main-content li{ line-height:1.6; color:var(--text-primary); }
 .main-content a{ color:var(--green); text-decoration:none; }
 .main-content a:hover{ text-decoration:underline; }
 .main-content .small{ font-size:0.95rem; color:var(--muted); margin-bottom:24px; }
@@ -22,13 +22,14 @@ main{ padding: 24px 0 40px; min-height: 50vh; }
 .main-content ol{ padding-left:20px; margin:12px 0; }
 .main-content li{ margin:6px 0; }
 .main-content .highlight{
-  background:linear-gradient(135deg,#f0f9ff,#e0f2fe);
+  background:rgba(41,168,84,0.06);
   padding:16px; border-left:4px solid var(--green);
-  margin:16px 0; border-radius:8px;
-  box-shadow:0 2px 8px rgba(41,168,84,0.08);
+  margin:16px 0; border-radius:var(--radius-sm);
+  box-shadow:0 2px 8px rgba(41,168,84,0.06);
+  border:1px solid var(--card-border);
 }
 @media (max-width:900px){
-  .main-content{ padding:24px; border-radius:16px; }
+  .main-content{ padding:24px; border-radius:var(--radius); }
   .main-content h1{ font-size:24px; }
   .main-content h2{ font-size:18px; }
 }
