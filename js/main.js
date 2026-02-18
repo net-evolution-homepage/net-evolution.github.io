@@ -5,6 +5,30 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Hintergrund reagiert ergonomisch auf Cursor (nur bei erlaubter Bewegung)
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var futurBg = document.getElementById('futurBg');
+  if (!futurBg) return;
+  var mouseX = 0, mouseY = 0;
+  var targetX = 0, targetY = 0;
+  var raf = null;
+  function updateMouse(e) {
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    targetX = (e.clientX / w - 0.5) * 2;
+    targetY = (e.clientY / h - 0.5) * 2;
+    if (raf) return;
+    raf = requestAnimationFrame(function tick() {
+      raf = null;
+      mouseX += (targetX - mouseX) * 0.06;
+      mouseY += (targetY - mouseY) * 0.06;
+      futurBg.style.setProperty('--mouse-x', String(mouseX.toFixed(4)));
+      futurBg.style.setProperty('--mouse-y', String(mouseY.toFixed(4)));
+      if (Math.abs(targetX - mouseX) > 0.001 || Math.abs(targetY - mouseY) > 0.001) raf = requestAnimationFrame(tick);
+    });
+  }
+  document.addEventListener('mousemove', updateMouse, { passive: true });
+
   // Mobile-Menü
   var btn = document.getElementById('mobileMenuBtn');
   var nav = document.getElementById('mainNav');
