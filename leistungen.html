@@ -26,17 +26,17 @@
     .logo .net{ color:var(--green); } .logo .evo{ color:var(--evo-gray); margin-left:0; }
     nav{ display:flex; gap:10px; align-items:center; background:rgba(255,255,255,0.9); backdrop-filter:blur(12px); padding:8px 14px; border-radius:16px; border:1px solid rgba(41,168,84,0.2); box-shadow:0 8px 32px rgba(41,168,84,0.1); flex-wrap:wrap; margin-left:auto; }
     nav .nav-links{ display:flex; gap:10px; align-items:center; justify-content:flex-end; }
-    .tagline{ color:#166534; font-size:12px; margin-top:3px; letter-spacing: 0.03em; text-transform: uppercase; opacity: 0.88; }
+    .tagline{ color:var(--green); font-size:12px; margin-top:3px; letter-spacing: 0.03em; text-transform: uppercase; opacity: 0.9; }
     nav a{ color:#14532d; text-decoration:none; font-weight:600; font-size:13px; padding:8px 14px; border-radius:12px; transition:all 0.25s ease; }
     nav a:hover{ background:rgba(41,168,84,0.15); color:var(--green); transform:translateY(-1px); }
     .mobile-menu{ display:none; border:0; background:rgba(255,255,255,0.9); padding:12px; border-radius:12px; cursor:pointer; flex-shrink:0; }
     .mobile-menu:hover{ transform:scale(1.05); }
-    .mobile-menu svg{ width:20px; height:20px; display:block; color:#166534; }
+    .mobile-menu svg{ width:20px; height:20px; display:block; color:var(--green); }
     .mobile-menu{ display:none; }
 
-    h1{ font-size:24px; margin:0 0 6px; text-align:center; color:#14532d; font-family: "Orbitron", sans-serif; letter-spacing: 0.03em;
+    h1{ font-size:24px; margin:0 0 6px; text-align:center; color:var(--green); font-family: "Orbitron", sans-serif; letter-spacing: 0.03em;
       opacity:0; transform:translateY(10px); animation: leistFadeUp 0.6s ease-out forwards; }
-    .intro{ text-align:center; color:#166534; margin:0 auto 24px; max-width:440px; line-height:1.6; font-size:14px; letter-spacing: 0.01em;
+    .intro{ text-align:center; color:var(--green); margin:0 auto 24px; max-width:440px; line-height:1.6; font-size:14px; letter-spacing: 0.01em;
       animation: leistFadeUp 0.6s ease-out 0.1s forwards; opacity:0; transform:translateY(10px); }
     @keyframes leistFadeUp{ to{ opacity:1; transform:translateY(0); } }
 
@@ -65,13 +65,32 @@
       to{ opacity:1; transform: translateY(0); }
     }
     .pkg:hover{ transform: translateY(-8px) scale(1.02); box-shadow: 0 16px 40px rgba(41,168,84,0.2); border-color: rgba(41,168,84,0.4); }
-    .pkg > div strong{ font-size:15px; color:#14532d; display:block; margin-bottom:6px; font-family: "Orbitron", sans-serif; letter-spacing: 0.02em; }
-    .price{ font-size:13px; font-weight:600; color:var(--green); margin:2px 0 10px 0; letter-spacing: 0.02em; text-transform: uppercase; opacity: 0.95; }
-    .pkg ul{ padding-left:18px; margin:0; color:#166534; list-style:none; }
+    .pkg > div strong{ font-size:15px; color:var(--green); display:block; margin-bottom:6px; font-family: "Orbitron", sans-serif; letter-spacing: 0.02em; }
+    .price{ font-size:13px; font-weight:600; color:var(--green); margin:2px 0 10px 0; letter-spacing: 0.02em; text-transform: uppercase; }
+    .pkg ul{ padding-left:18px; margin:0; color:var(--green); list-style:none; }
     .pkg li{ font-size:13px; line-height:1.65; margin:5px 0; position:relative; padding-left:6px; letter-spacing: 0.01em; }
     .pkg li::before{ content:'•'; color:var(--green); font-weight:bold; position:absolute; left:-8px; }
 
-    .small-note{ font-size:12px; color:#166534; text-align:center; letter-spacing: 0.02em; line-height:1.5; }
+    .small-note{ font-size:12px; color:var(--green); text-align:center; letter-spacing: 0.02em; line-height:1.5; }
+    .packages-buy{ margin-top:48px; }
+    .packages-buy h2{ font-size:20px; color:var(--green); text-align:center; margin:0 0 24px; font-family: "Orbitron", sans-serif; letter-spacing: 0.03em; }
+    .packages-buy .grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
+    .pkg-buy{
+      background:rgba(255,255,255,0.95); backdrop-filter:blur(12px);
+      padding:24px; border-radius:16px; border:1px solid rgba(41,168,84,0.25);
+      box-shadow:0 8px 24px rgba(41,168,84,0.1);
+      display:flex; flex-direction:column; transition: all 0.3s ease;
+    }
+    .pkg-buy:hover{ transform:translateY(-4px); box-shadow:0 12px 32px rgba(41,168,84,0.2); border-color:rgba(41,168,84,0.4); }
+    .pkg-buy.featured{ border-color:rgba(41,168,84,0.5); box-shadow:0 10px 28px rgba(41,168,84,0.18); }
+    .pkg-buy strong{ font-size:16px; color:var(--green); display:block; margin-bottom:8px; font-family: "Orbitron", sans-serif; }
+    .pkg-buy .price-tag{ font-size:22px; font-weight:700; color:var(--green); margin:8px 0 16px; }
+    .pkg-buy .price-tag span{ font-size:13px; font-weight:500; opacity:0.9; }
+    .pkg-buy ul{ padding-left:18px; margin:0 0 20px; list-style:none; flex-grow:1; }
+    .pkg-buy li{ font-size:13px; line-height:1.6; margin:6px 0; position:relative; padding-left:14px; color:var(--green); }
+    .pkg-buy li::before{ content:'•'; color:var(--green); position:absolute; left:0; }
+    .pkg-buy .btn{ display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border-radius:12px; font-weight:600; font-size:13px; text-decoration:none; transition:all 0.25s ease; background:linear-gradient(135deg, var(--green), #16a56f); color:white; box-shadow:0 4px 12px rgba(41,168,84,0.25); }
+    .pkg-buy .btn:hover{ transform:translateY(-2px); box-shadow:0 6px 20px rgba(41,168,84,0.35); background:linear-gradient(135deg, #16a56f, var(--green)); }
     .site-footer{
       margin-top:40px; padding: 32px 28px;
       background:rgba(255,255,255,0.92); backdrop-filter:blur(20px);
@@ -82,14 +101,14 @@
     .site-footer::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--green), #16a56f); }
     .site-footer .footer-inner{ display:grid; grid-template-columns: minmax(200px,1fr) minmax(180px,1fr) minmax(140px,1fr); gap:28px; align-items:start; margin:0 auto 16px; }
     .footer-brand .logo{ display:inline-flex; align-items:center; gap:2px; font-size:20px; font-weight:700; }
-    .footer-brand p{ margin:8px 0 0; color:#166534; font-size:13px; line-height:1.55; max-width:320px; }
-    .footer-contact h4{ color:#14532d; margin:0 0 8px 0; font-weight:600; font-size:14px; letter-spacing: 0.04em; text-transform: uppercase; }
-    .footer-contact p{ margin:0; color:#166534; line-height:1.5; font-size:13px; }
+    .footer-brand p{ margin:8px 0 0; color:var(--green); font-size:13px; line-height:1.55; max-width:320px; }
+    .footer-contact h4{ color:var(--green); margin:0 0 8px 0; font-weight:600; font-size:14px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-contact p{ margin:0; color:var(--green); line-height:1.5; font-size:13px; }
     .footer-contact a{ color:var(--green); text-decoration:none; font-weight:500; }
     .footer-contact a:hover{ text-decoration:underline; }
-    .footer-links h4{ color:#14532d; margin:0 0 8px 0; font-weight:600; font-size:14px; letter-spacing: 0.04em; text-transform: uppercase; }
+    .footer-links h4{ color:var(--green); margin:0 0 8px 0; font-weight:600; font-size:14px; letter-spacing: 0.04em; text-transform: uppercase; }
     .footer-links ul{ list-style:none; padding:0; margin:6px 0 0; display:flex; flex-direction:column; gap:6px; }
-    .footer-links li a{ color:#166534; text-decoration:none; font-weight:500; }
+    .footer-links li a{ color:var(--green); text-decoration:none; font-weight:500; }
     .footer-links li a:hover{ color:var(--green); }
     .footer-bottom{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:24px; border-top:1px solid rgba(41,168,84,0.12); }
     .footer-bottom .small-note{ font-size:12px; text-align:left; }
@@ -185,6 +204,8 @@
       .packages{ grid-template-columns:1fr; gap:14px }
       .pkg-featured{ max-width: 100%; }
       .pkg{ padding:20px }
+      .packages-buy .grid{ grid-template-columns:1fr; }
+      .pkg-buy{ padding:20px }
       h1{ font-size:22px; }
       .intro{ font-size:14px; }
     }
@@ -238,15 +259,66 @@
       <p class="intro">Von gehosteter Infrastruktur über Support bis zu Entwicklung und Wartung — maßgeschneidert und aus einer Hand.</p>
       <div class="packages" role="list">
         <div class="pkg pkg-featured" role="listitem" aria-labelledby="pkg-cloud" style="border-color:rgba(41,168,84,0.4);box-shadow:0 10px 28px rgba(41,168,84,0.15)"><div id="pkg-cloud"><strong>Deutsche Cloud / Hosting</strong></div><div class="price">Unternehmen</div><ul><li>Softwarebetrieb auf Servern in Deutschland</li><li>DSGVO-konform</li><li>Betrieb und Wartung aus einer Hand</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-1"><div id="pkg-1"><strong>IT-Support</strong></div><div class="price">Privat</div><ul><li>Reparatur und Systemoptimierung</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-2"><div id="pkg-2"><strong>Schulungen</strong></div><div class="price">Privat & Business</div><ul><li>Individuell oder in Gruppen</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-4"><div id="pkg-4"><strong>Websites</strong></div><div class="price">Modern & responsiv</div><ul><li>Design und Content-Management</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-5"><div id="pkg-5"><strong>Web-Design</strong></div><div class="price">Maßgeschneidert</div><ul><li>UI/UX und Branding</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-1"><div id="pkg-1"><strong>IT-Support</strong></div><div class="price">Privat und Unternehmen</div><ul><li>Reparatur und Systemoptimierung</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-2"><div id="pkg-2"><strong>Schulungen</strong></div><div class="price">Privat und Unternehmen</div><ul><li>Individuell oder in Gruppen</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-4"><div id="pkg-4"><strong>Websites</strong></div><div class="price">Privat und Unternehmen</div><ul><li>Design und Content-Management</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-5"><div id="pkg-5"><strong>Web-Design</strong></div><div class="price">Privat und Unternehmen</div><ul><li>UI/UX und Branding</li></ul></div>
         <div class="pkg" role="listitem" aria-labelledby="pkg-7"><div id="pkg-7"><strong>IT-Schulungen</strong></div><div class="price">Unternehmen</div><ul><li>Mitarbeiterschulungen und Software-Training</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-8"><div id="pkg-8"><strong>Systemplanung</strong></div><div class="price">Komplettlösungen</div><ul><li>Architektur und Migration</li></ul></div>
-        <div class="pkg" role="listitem" aria-labelledby="pkg-9"><div id="pkg-9"><strong>Wartung</strong></div><div class="price">Support</div><ul><li>Updates und Monitoring</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-8"><div id="pkg-8"><strong>Systemplanung</strong></div><div class="price">Unternehmen</div><ul><li>Architektur und Migration</li></ul></div>
+        <div class="pkg" role="listitem" aria-labelledby="pkg-9"><div id="pkg-9"><strong>Wartung</strong></div><div class="price">Unternehmen</div><ul><li>Updates und Monitoring</li></ul></div>
       </div>
-      <p class="small-note">Jedes Vorhaben beginnt mit einem kostenlosen Erstgespräch.</p>
+
+      <section class="packages-buy">
+        <h2>Pakete zum Kaufen</h2>
+        <div class="grid">
+          <div class="pkg-buy featured">
+            <strong>Cloud Starter</strong>
+            <div class="price-tag">ab 49 € <span>pro Monat</span></div>
+            <ul>
+              <li>Softwarebetrieb auf Servern in Deutschland</li>
+              <li>DSGVO-konform</li>
+              <li>5 GB Speicher</li>
+              <li>Regelmäßige Backups</li>
+            </ul>
+            <a href="mailto:info@net-evolution.de?subject=Paketanfrage%3A%20Cloud%20Starter" class="btn">Jetzt anfragen</a>
+          </div>
+          <div class="pkg-buy featured">
+            <strong>Cloud Business</strong>
+            <div class="price-tag">ab 99 € <span>pro Monat</span></div>
+            <ul>
+              <li>Softwarebetrieb und Wartung aus einer Hand</li>
+              <li>DSGVO-konform</li>
+              <li>20 GB Speicher</li>
+              <li>Priorisierter Support</li>
+            </ul>
+            <a href="mailto:info@net-evolution.de?subject=Paketanfrage%3A%20Cloud%20Business" class="btn">Jetzt anfragen</a>
+          </div>
+          <div class="pkg-buy">
+            <strong>IT-Support Basis</strong>
+            <div class="price-tag">ab 199 € <span>pro Monat</span></div>
+            <ul>
+              <li>5 Stunden Support pro Monat</li>
+              <li>Vor-Ort und Remote</li>
+              <li>Reparatur und Systemoptimierung</li>
+              <li>Region Bad Kreuznach, Bingen, Stromberg</li>
+            </ul>
+            <a href="mailto:info@net-evolution.de?subject=Paketanfrage%3A%20IT-Support%20Basis" class="btn">Jetzt anfragen</a>
+          </div>
+          <div class="pkg-buy">
+            <strong>IT-Support Plus</strong>
+            <div class="price-tag">ab 349 € <span>pro Monat</span></div>
+            <ul>
+              <li>10 Stunden Support pro Monat</li>
+              <li>Vor-Ort und Remote</li>
+              <li>Proaktives Monitoring</li>
+              <li>Prioritäts-Support</li>
+            </ul>
+            <a href="mailto:info@net-evolution.de?subject=Paketanfrage%3A%20IT-Support%20Plus" class="btn">Jetzt anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <p class="small-note">Jedes Vorhaben beginnt mit einem kostenlosen Erstgespräch. Preise verstehen sich zzgl. MwSt.</p>
     </main>
 
     <footer class="site-footer" role="contentinfo" aria-label="Fußbereich">

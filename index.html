@@ -89,7 +89,7 @@
       .orb{ animation: none; opacity: 0.35; }
       .hero-card{ animation: heroEnter 0.6s ease-out forwards; }
       .hero-card::before{ background-size: 100% 100%; animation: none; }
-      .hero-card h1, .hero-card .lead, .hero-card .actions, .hero-card .status-line{ animation: fadeUp 0.4s ease-out forwards; }
+      .hero-card h1, .hero-card .lead, .hero-card .claim, .hero-card .actions, .hero-card .status-line{ animation: fadeUp 0.4s ease-out forwards; }
       .btn.primary{ animation: none; }
     }
     .wrap{ max-width:var(--max-width); margin:0 auto; padding:0 24px; position:relative; z-index:1; }
@@ -159,6 +159,7 @@
     .hero-card h1{ font-size:26px; line-height:1.35; color:#14532d; margin-bottom:14px; font-weight:700; text-align:center; font-family: "Orbitron", sans-serif; letter-spacing: 0.02em;
       animation: fadeUp 0.6s ease-out 0.2s forwards; opacity:0; transform:translateY(12px); }
     .hero-card .lead{ animation: fadeUp 0.6s ease-out 0.35s forwards; opacity:0; transform:translateY(12px); }
+    .hero-card .claim{ animation: fadeUp 0.6s ease-out 0.4s forwards; opacity:0; transform:translateY(12px); font-size:15px; color:#166534; margin:12px 0 0; line-height:1.6; text-align:center; font-weight:500; }
     .hero-card .actions{ animation: fadeUp 0.6s ease-out 0.5s forwards; opacity:0; transform:translateY(12px); }
     .hero-card .status-line{ animation: fadeUp 0.5s ease-out 0.65s forwards; opacity:0; }
     @keyframes fadeUp{
@@ -843,6 +844,7 @@
         <div class="hero-card reveal" data-reveal>
           <h1 id="hero-heading">Deutsche Cloud.<br>Ihre IT entlastet.</h1>
           <p class="lead">Betrieb und Wartung Ihrer Software auf Servern in Deutschland — DSGVO-konform und aus einer Hand.</p>
+          <p class="claim">Von der Idee zum laufenden Programm — ohne dass Sie einen Finger krümmen müssen. Wir regeln das für Sie.</p>
           <div class="actions" role="group" aria-label="Hauptaktionen" style="margin-top:20px;justify-content:center">
             <a class="btn primary" href="mailto:info@net-evolution.de?subject=Erstgespr%C3%A4ch%20anfragen">Kostenloses Erstgespräch</a>
           </div>
