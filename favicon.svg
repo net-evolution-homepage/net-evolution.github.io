@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Vollflächiger Hintergrund -->
+  <rect x="0" y="0" width="64" height="64" rx="12" fill="#29a854"/>
+
+  <!-- NE-Monogramm zentriert und vergrößert (nutzt den Platz aus) -->
+  <g stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"
+     transform="translate(32,32) scale(1.85) translate(-33,-32)">
+    <!-- N -->
+    <path d="M21 42V22l10 20V22"/>
+
+    <!-- E -->
+    <path d="M35 22h10M35 32h8M35 42h10"/>
+  </g>
+</svg>
