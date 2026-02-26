@@ -34,27 +34,35 @@
     futurBg.style.setProperty('--mouse-y', '0');
   }, { passive: true });
 
-  // Startseite: Header bleibt erst stehen, wenn grüner Balken der Hero-Box erreicht
+  // Startseite: Weißer Header schon beim ersten kleinen Scroll
   (function startpageHeaderSticky() {
     if (!document.body.classList.contains('startpage')) return;
     var header = document.getElementById('mainHeader');
     var heroCard = document.querySelector('.startpage .hero-card');
     var placeholder = document.getElementById('headerPlaceholder');
     if (!header || !heroCard || !placeholder) return;
-    var gap = 20;
+    var stickThreshold = 70;
+    var unstickThreshold = 58;
     var ticking = false;
     function update() {
-      var rect = heroCard.getBoundingClientRect();
       var headerH = header.offsetHeight;
-      var shouldStick = rect.top <= headerH + gap;
+      var scrollY = window.scrollY;
+      var isSticky = header.classList.contains('header-sticky');
+      var shouldStick = isSticky
+        ? scrollY > unstickThreshold
+        : scrollY > stickThreshold;
       if (shouldStick) {
         header.classList.add('header-sticky');
         placeholder.classList.add('active');
+        placeholder.style.transition = '';
         placeholder.style.height = headerH + 'px';
       } else {
         header.classList.remove('header-sticky');
         placeholder.classList.remove('active');
+        placeholder.style.transition = 'none';
         placeholder.style.height = '0';
+        placeholder.offsetHeight;
+        placeholder.style.transition = '';
       }
       ticking = false;
     }

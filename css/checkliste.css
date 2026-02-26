@@ -5,32 +5,32 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
-  color: #1e293b;
+  color: #0f172a;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  background: linear-gradient(165deg, #f0fdf4 0%, #ecfdf5 40%, #d1fae5 100%);
+  background: #f8fafc;
 }
 
 .header {
   text-align: center;
   margin-bottom: 40px;
   padding-bottom: 30px;
-  border-bottom: 3px solid #29a854;
+  border-bottom: 3px solid #0d9488;
 }
 
 .header h1 {
-  color: #072b26;
-  font-size: 28px;
+  color: #0f172a;
+  font-size: 1.75rem;
   margin: 0 0 10px 0;
   font-weight: 700;
 }
 
 .header p {
   color: #64748b;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
 }
 
@@ -40,8 +40,8 @@ body {
 }
 
 .section h2 {
-  color: #29a854;
-  font-size: 20px;
+  color: #0d9488;
+  font-size: 1.25rem;
   margin: 0 0 20px 0;
   padding-bottom: 10px;
   border-bottom: 2px solid #e2e8f0;
@@ -53,7 +53,7 @@ body {
   margin-bottom: 15px;
   padding: 12px;
   background: #f8fafc;
-  border-left: 4px solid #29a854;
+  border-left: 4px solid #0d9488;
   border-radius: 4px;
 }
 
@@ -63,7 +63,7 @@ body {
   margin-right: 15px;
   margin-top: 2px;
   flex-shrink: 0;
-  accent-color: #29a854;
+  accent-color: #0d9488;
 }
 
 .checklist-item label {
@@ -91,7 +91,7 @@ body {
   content: '';
   width: 6px;
   height: 20px;
-  background: #29a854;
+  background: #0d9488;
   border-radius: 2px;
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .footer strong {
-  color: #29a854;
+  color: #0d9488;
   font-weight: 600;
 }
 
@@ -134,7 +134,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #29a854, #16a56f);
+  background: linear-gradient(135deg, #0d9488, #0f766e);
   color: white;
   border: none;
   padding: 14px 24px;
@@ -164,7 +164,7 @@ body {
 }
 
 .header-top-link a {
-  color: #29a854;
+  color: #0d9488;
   text-decoration: none;
   font-weight: 600;
 }
@@ -175,7 +175,7 @@ body {
 }
 
 .footer a {
-  color: #29a854;
+  color: #0d9488;
 }
 
 .footer-copy {
