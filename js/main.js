@@ -34,6 +34,40 @@
     futurBg.style.setProperty('--mouse-y', '0');
   }, { passive: true });
 
+  // Startseite: Header bleibt erst stehen, wenn grüner Balken der Hero-Box erreicht
+  (function startpageHeaderSticky() {
+    if (!document.body.classList.contains('startpage')) return;
+    var header = document.getElementById('mainHeader');
+    var heroCard = document.querySelector('.startpage .hero-card');
+    var placeholder = document.getElementById('headerPlaceholder');
+    if (!header || !heroCard || !placeholder) return;
+    var gap = 20;
+    var ticking = false;
+    function update() {
+      var rect = heroCard.getBoundingClientRect();
+      var headerH = header.offsetHeight;
+      var shouldStick = rect.top <= headerH + gap;
+      if (shouldStick) {
+        header.classList.add('header-sticky');
+        placeholder.classList.add('active');
+        placeholder.style.height = headerH + 'px';
+      } else {
+        header.classList.remove('header-sticky');
+        placeholder.classList.remove('active');
+        placeholder.style.height = '0';
+      }
+      ticking = false;
+    }
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  })();
+
   // Mobile-Menü
   var btn = document.getElementById('mobileMenuBtn');
   var nav = document.getElementById('mainNav');

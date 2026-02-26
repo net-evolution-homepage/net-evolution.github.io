@@ -45,14 +45,28 @@ body{
   position:relative;
   overflow-x:hidden;
 }
-/* Futuristischer Hintergrund: Grid + Orbs folgen der Cursor-Position */
+/* Futuristischer Hintergrund: fixiert, volle Fläche; beim Scrollen bleibt er oben, Inhalt scrollt darüber */
 .futur-bg{
   position:fixed;
-  inset:0;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  min-height:100vh;
+  min-height:100dvh;
   pointer-events:none;
   z-index:0;
   --mouse-x: 0;
   --mouse-y: 0;
+  background: linear-gradient(165deg, #f0fdf4 0%, #ecfdf5 35%, #d1fae5 70%, #a7f3d0 100%);
+  background-size: 220% 220%;
+  animation: bgShift 14s ease-in-out infinite;
+}
+@keyframes bgShift{
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 /* Grid kippt leicht in Blickrichtung des Cursors */
 .futur-bg::before{
@@ -105,7 +119,60 @@ body{
   33%{ transform: translate(40px,-25px) scale(1.08); opacity: 0.65; }
   66%{ transform: translate(-25px,20px) scale(0.92); opacity: 0.55; }
 }
+
+/* Startseite: Hero füllt ersten Viewport, animierter Hintergrund sichtbar; beim Scrollen bleibt Hintergrund oben */
+.startpage main{
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-top: 0;
+  padding-bottom: 48px;
+  justify-content: center;
+}
+.startpage .hero{
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+.startpage .hero-cta{
+  margin-top: 28px;
+}
+
+/* Startseite: Logo + Nav scrollen mit, Stopp kurz vor dem grünen Balken der Hero-Box (per JS) */
+.startpage .wrap > header{
+  z-index: 100;
+  transition: box-shadow var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.startpage .wrap > header.header-sticky{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 16px;
+  width: calc(100vw - 48px);
+  max-width: var(--max-width);
+  margin: 0;
+  padding: 16px 24px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.startpage .wrap > header.header-sticky .brand,
+.startpage .wrap > header.header-sticky nav{
+  flex-shrink: 0;
+}
+/* Platzhalter verhindert Layout-Sprung wenn Header fixiert wird */
+.startpage .header-placeholder{
+  display: none;
+  height: 0;
+}
+.startpage .header-placeholder.active{
+  display: block;
+}
+
 @media (prefers-reduced-motion: reduce){
+  .futur-bg{ animation: none; background-size: 100% 100%; }
   .futur-bg::before{ animation: none; transform: none; }
   .futur-bg-orbs{ transform: none; transition: none; }
   .orb{ animation: none; opacity: 0.35; }
