@@ -256,6 +256,7 @@ header{
   flex-wrap: wrap;
 }
 .brand{ display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; flex-shrink: 0; min-width: 0; }
+.brand:focus{ outline: none; box-shadow: none; }
 .logo{
   font-weight: 700;
   font-size: 1.125rem;
