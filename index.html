@@ -21,16 +21,18 @@
   </div>
   <a class="skip-link" href="#maincontent">Zum Hauptinhalt</a>
 
-  <!-- Videos werden automatisch erkannt: video/1.mp4, video/2.mp4, … bis video/50.mp4 (nur vorhandene). Optional: data-video-sources="video/a.mp4,video/b.mp4" für eigene Liste. -->
-  <section class="video-hero" aria-label="Hintergrundvideo" id="videoHeroSection">
+  <!-- Ein Video: video/video.mp4 (Endlosschleife). Mehrere: data-video-sources="video/1.mp4,video/2.mp4" oder Ordner 1.mp4 … 50.mp4. -->
+  <section class="video-hero" aria-label="Hintergrundvideo" id="videoHeroSection" data-video-sources="video/video.mp4">
     <div class="video-hero-bg" id="videoHeroBg" aria-hidden="true">
-      <video id="videoHeroPlayer" muted playsinline preload="auto" aria-hidden="true"></video>
+      <video id="videoHeroPlayer" muted playsinline preload="auto" loop aria-hidden="true"></video>
     </div>
     <div class="video-hero-overlay" aria-hidden="true"></div>
     <div class="video-hero-content">
-      <p class="video-hero-tagline">IT-Dienstleistungen und gehostete Infrastruktur aus Deutschland</p>
-      <p class="video-hero-desc">Managed Hosting, Support und Wartung - DSGVO-konform, aus einer Hand.</p>
-      <a href="#maincontent" class="video-hero-scroll">Mehr erfahren</a>
+      <div class="video-hero-text">
+        <p class="video-hero-tagline">Ihre IT im Fokus. Unsere Expertise für Sie.</p>
+        <p class="video-hero-desc">Deutsche Cloud-Infrastruktur, Hosting und Support aus einer Hand – DSGVO-konform. Wir übernehmen den Betrieb, Sie konzentrieren sich auf Ihr Geschäft.</p>
+        <a href="#maincontent" class="video-hero-scroll">Kostenloses Erstgespräch</a>
+      </div>
     </div>
   </section>
 
