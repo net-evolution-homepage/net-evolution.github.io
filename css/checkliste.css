@@ -1,4 +1,4 @@
-/* IT-Sicherheitscheckliste – Enterprise-Layout, baut auf common.css auf */
+/* IT-Sicherheitscheckliste - Enterprise-Layout, baut auf common.css auf */
 main { padding: 24px 0 40px; min-height: 50vh; }
 .breadcrumb {
   background: var(--bg-subtle);

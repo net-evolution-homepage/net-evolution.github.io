@@ -67,7 +67,7 @@ body{
   display: none;
 }
 
-/* Startseite: Video-Sektion 100vh – Video + Text scrollen gemeinsam nach oben */
+/* Startseite: Video-Sektion 100vh - Video + Text scrollen gemeinsam nach oben */
 .startpage .video-hero{
   position: relative;
   height: 100vh;
