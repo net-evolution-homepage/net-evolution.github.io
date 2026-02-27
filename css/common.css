@@ -388,7 +388,8 @@ nav a:focus{ outline: none; box-shadow: 0 0 0 2px var(--green); }
 .benefits{ max-width: 720px; margin: 48px auto 0; padding: 0 16px; }
 .benefits-title{ font-size: 1.125rem; font-weight: 600; color: var(--text-secondary); text-align: center; margin: 0 0 20px; }
 .benefits-list{ list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 24px; }
-.benefits-list li{ font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.55; padding-left: 0; }
+.benefits-list li{ font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.55; padding-left: 18px; position: relative; }
+.benefits-list li::before{ content: '•'; color: var(--green); font-weight: bold; position: absolute; left: 0; }
 .benefits-list strong{ color: var(--text-primary); }
 @media (max-width: 640px){ .benefits-list{ grid-template-columns: 1fr; gap: 12px; } }
 
