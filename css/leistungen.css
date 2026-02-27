@@ -33,7 +33,7 @@ h1{ font-size: 1.5rem; margin: 0 0 8px; text-align: center; color: var(--text-pr
 .pkg:hover{ box-shadow: var(--shadow-card-hover); border-color: var(--card-border-hover); }
 .pkg > div strong{ font-size: 0.9375rem; color: var(--green); display: block; margin-bottom: 6px; font-family: "Inter", system-ui, sans-serif; font-weight: 600; }
 .price{ font-size: 0.8125rem; font-weight: 600; color: var(--green); margin: 2px 0 10px 0; letter-spacing: 0.02em; text-transform: uppercase; }
-.pkg ul{ padding-left:18px; margin:0; color:var(--green); list-style:none; }
+.pkg ul{ padding-left:18px; margin:0; color:var(--text-secondary); list-style:none; }
 .pkg li{ font-size:13px; line-height:1.65; margin:5px 0; position:relative; padding-left:6px; letter-spacing: 0.01em; }
 .pkg li::before{ content:'•'; color:var(--green); font-weight:bold; position:absolute; left:-8px; }
 
