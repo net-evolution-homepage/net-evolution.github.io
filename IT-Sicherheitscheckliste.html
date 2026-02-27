@@ -6,257 +6,330 @@
   <title>IT-Sicherheitscheckliste · Net-Evolution</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/checkliste.css">
 </head>
 <body>
-  <div class="header">
-    <p class="header-top-link"><a href="index.html">← Net-Evolution</a></p>
-    <h1>IT-Sicherheitscheckliste</h1>
-    <p>Prüfen Sie selbst, ob Ihr System grundlegend geschützt ist</p>
-    <p class="header-meta">
-      <strong>Firma/Name:</strong> _______________________ | <strong>Datum:</strong> _______________________
-    </p>
-  </div>
-
-  <div class="info-box">
-    <h3>📋 Hinweise zur Checkliste</h3>
-    <p>Gehen Sie systematisch durch alle Bereiche und markieren Sie die Punkte, die Sie bereits umgesetzt haben oder noch umsetzen müssen. Ein Haken bedeutet, dass dieser Punkt erfüllt ist.</p>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Passwort-Sicherheit</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd1">
-      <label for="pwd1">Alle Passwörter sind mindestens 12 Zeichen lang</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd2">
-      <label for="pwd2">Passwörter enthalten Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd3">
-      <label for="pwd3">Keine Passwörter auf Zetteln oder Post-its notiert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd4">
-      <label for="pwd4">Passwort-Manager wird verwendet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd5">
-      <label for="pwd5">Kein Kennwort wird für mehrere Accounts verwendet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="pwd6">
-      <label for="pwd6">Zwei-Faktor-Authentifizierung (2FA) ist aktiviert, wo möglich</label>
+  <div class="futur-bg" id="futurBg" aria-hidden="true">
+    <div class="futur-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
     </div>
   </div>
+  <a class="skip-link" href="#maincontent">Zum Hauptinhalt</a>
 
-  <div class="category">
-    <h2 class="category-title">Backup-Status</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="backup1">
-      <label for="backup1">Regelmäßige automatische Backups sind eingerichtet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="backup2">
-      <label for="backup2">Backups werden mindestens einmal pro Woche getestet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="backup3">
-      <label for="backup3">Backups werden an einem externen Speicherort gesichert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="backup4">
-      <label for="backup4">Cloud-Backup Lösung ist implementiert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="backup5">
-      <label for="backup5">Alle wichtigen Dateien werden gesichert (Dokumente, Fotos, Datenbanken)</label>
-    </div>
+  <div class="wrap">
+    <header role="banner" aria-label="Seitenkopf">
+      <a class="brand" href="index.html">
+        <div class="logo" aria-hidden="true"><span class="net">Net</span><span class="evo">-Evolution</span></div>
+        <div class="tagline">Managed Hosting · IT-Projektlösungen</div>
+      </a>
+      <button class="mobile-menu" id="mobileMenuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"></path>
+        </svg>
+      </button>
+      <nav id="mainNav" role="navigation" aria-label="Hauptnavigation">
+        <div class="nav-links">
+          <a href="leistungen.html">Leistungen</a>
+          <a href="IT-Sicherheitscheckliste.html" aria-current="page">Checkliste</a>
+          <a href="impressum.html">Impressum</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="maincontent" role="main" tabindex="-1">
+      <div class="breadcrumb">
+        <a href="index.html">Startseite</a> → IT-Sicherheitscheckliste
+      </div>
+
+      <div class="checkliste-content">
+        <div class="checkliste-intro">
+          <h1>IT-Sicherheitscheckliste</h1>
+          <p>Prüfen Sie selbst, ob Ihr System grundlegend geschützt ist</p>
+          <p class="checkliste-meta">
+            <strong>Firma/Name:</strong> _______________________ | <strong>Datum:</strong> _______________________
+          </p>
+        </div>
+
+        <div class="info-box">
+          <h3>Hinweise zur Checkliste</h3>
+          <p>Gehen Sie systematisch durch alle Bereiche und markieren Sie die Punkte, die Sie bereits umgesetzt haben oder noch umsetzen müssen. Ein Haken bedeutet, dass dieser Punkt erfüllt ist.</p>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Passwort-Sicherheit</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd1">
+            <label for="pwd1">Alle Passwörter sind mindestens 12 Zeichen lang</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd2">
+            <label for="pwd2">Passwörter enthalten Groß- und Kleinbuchstaben, Zahlen und Sonderzeichen</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd3">
+            <label for="pwd3">Keine Passwörter auf Zetteln oder Post-its notiert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd4">
+            <label for="pwd4">Passwort-Manager wird verwendet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd5">
+            <label for="pwd5">Kein Kennwort wird für mehrere Accounts verwendet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="pwd6">
+            <label for="pwd6">Zwei-Faktor-Authentifizierung (2FA) ist aktiviert, wo möglich</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Backup-Status</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="backup1">
+            <label for="backup1">Regelmäßige automatische Backups sind eingerichtet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="backup2">
+            <label for="backup2">Backups werden mindestens einmal pro Woche getestet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="backup3">
+            <label for="backup3">Backups werden an einem externen Speicherort gesichert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="backup4">
+            <label for="backup4">Cloud-Backup Lösung ist implementiert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="backup5">
+            <label for="backup5">Alle wichtigen Dateien werden gesichert (Dokumente, Fotos, Datenbanken)</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Software-Updates</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="update1">
+            <label for="update1">Betriebssystem ist auf dem neuesten Stand</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="update2">
+            <label for="update2">Automatische Updates sind aktiviert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="update3">
+            <label for="update3">Alle Anwendungen sind aktuell</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="update4">
+            <label for="update4">Browser und Browser-Erweiterungen sind aktualisiert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="update5">
+            <label for="update5">Veraltete Software wurde deinstalliert</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">WLAN-Sicherheit</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi1">
+            <label for="wifi1">WLAN-Passwort ist stark und wurde kürzlich geändert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi2">
+            <label for="wifi2">WPA3 oder zumindest WPA2 Verschlüsselung ist aktiviert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi3">
+            <label for="wifi3">WPS (Wi-Fi Protected Setup) ist deaktiviert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi4">
+            <label for="wifi4">Router-Administrationspasswort wurde geändert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi5">
+            <label for="wifi5">SSID (Netzwerkname) gibt keine persönlichen Informationen preis</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi6">
+            <label for="wifi6">Firmware des Routers ist aktuell</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="wifi7">
+            <label for="wifi7">Gast-WLAN ist getrennt und hat eigene Sicherheitseinstellungen</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Antivirus &amp; Malware-Schutz</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="av1">
+            <label for="av1">Antivirus-Software ist installiert und aktiviert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="av2">
+            <label for="av2">Antivirus ist auf dem neuesten Stand</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="av3">
+            <label for="av3">Regelmäßige Scans sind eingerichtet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="av4">
+            <label for="av4">Firewall ist aktiviert</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="av5">
+            <label for="av5">Browser-Adblocker ist installiert</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Phishing &amp; Social Engineering</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="phish1">
+            <label for="phish1">E-Mail-Absender werden immer geprüft</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phish2">
+            <label for="phish2">Verdächtige Links werden nicht angeklickt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phish3">
+            <label for="phish3">Anhänge werden nur von bekannten Absendern geöffnet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phish4">
+            <label for="phish4">Immer auf verdächtige Grammatik- und Rechtschreibfehler geachtet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phish5">
+            <label for="phish5">Unaufgefordert erhaltene Anrufe mit Nachfrage überprüfen</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Netzwerk &amp; Cloud-Sicherheit</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="cloud1">
+            <label for="cloud1">Cloud-Speicher ist verschlüsselt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="cloud2">
+            <label for="cloud2">Zugriffsrechte in Cloud-Diensten sind richtig gesetzt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="cloud3">
+            <label for="cloud3">VPN wird für öffentliche WLANs verwendet</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="cloud4">
+            <label for="cloud4">Port-Freigaben sind auf ein Minimum reduziert</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Physische Sicherheit</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="phys1">
+            <label for="phys1">Bildschirm sperrt sich automatisch nach Inaktivität</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phys2">
+            <label for="phys2">Geräte sind physisch gesichert (z.B. Kensington-Schloss)</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phys3">
+            <label for="phys3">Sensible Dokumente sind verschlossen aufbewahrt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="phys4">
+            <label for="phys4">Datenträger mit sensiblen Daten werden verschlüsselt</label>
+          </div>
+        </div>
+
+        <div class="category">
+          <h2 class="category-title">Zugriffsrechte &amp; Berechtigungen</h2>
+          <div class="checklist-item">
+            <input type="checkbox" id="access1">
+            <label for="access1">Benutzerkonten haben nur nötige Berechtigungen</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="access2">
+            <label for="access2">Administrator-Konten sind klar definiert und begrenzt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="access3">
+            <label for="access3">Ehemalige Mitarbeiter-Zugriffe wurden entfernt</label>
+          </div>
+          <div class="checklist-item">
+            <input type="checkbox" id="access4">
+            <label for="access4">Regelmäßige Überprüfung der Berechtigungen</label>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <h3>Nächste Schritte</h3>
+          <p>Nach der Überprüfung sollten Sie alle nicht markierten Punkte angehen. Wenn Sie Hilfe bei der Umsetzung benötigen, kontaktieren Sie uns gerne für ein kostenloses Erstgespräch.</p>
+        </div>
+
+        <button type="button" class="print-btn no-print" onclick="window.print()">Als PDF drucken</button>
+      </div>
+    </main>
+
+    <footer class="site-footer" role="contentinfo" aria-label="Fußbereich">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo"><span class="net">Net</span><span class="evo">-Evolution</span></div>
+          <p>IT-Dienstleistungen und gehostete Infrastruktur in Deutschland. Region Bad Kreuznach, Bingen, Stromberg.</p>
+        </div>
+        <div class="footer-contact" aria-label="Kontaktinformationen">
+          <h4>Kontakt</h4>
+          <p>Telefon: <a href="tel:+4915679708019">+49 15679 708019</a><br>
+          E-Mail: <a href="mailto:info@net-evolution.de">info@net-evolution.de</a></p>
+          <p>Weinbergstraße 17, 55452 Dorsheim</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer-Links">
+          <ul>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="mailto:info@net-evolution.de?subject=Erstgespr%C3%A4ch%20anfragen">Erstgespräch anfragen</a></li>
+            <li><a href="agb.html">AGB</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+            <li><a href="IT-Sicherheitscheckliste.html" aria-current="page">IT-Sicherheitscheckliste</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <div class="small-note">© <span id="year"></span> Net-Evolution. Alle Rechte vorbehalten.</div>
+        <div class="small-note">Verantwortlich: Marvin Henrich · <a href="impressum.html">Impressum</a> · <a href="mailto:info@net-evolution.de">info@net-evolution.de</a></div>
+      </div>
+    </footer>
   </div>
 
-  <div class="category">
-    <h2 class="category-title">Software-Updates</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="update1">
-      <label for="update1">Betriebssystem ist auf dem neuesten Stand</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="update2">
-      <label for="update2">Automatische Updates sind aktiviert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="update3">
-      <label for="update3">Alle Anwendungen sind aktuell</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="update4">
-      <label for="update4">Browser und Browser-Erweiterungen sind aktualisiert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="update5">
-      <label for="update5">Veraltete Software wurde deinstalliert</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">WLAN-Sicherheit</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi1">
-      <label for="wifi1">WLAN-Passwort ist stark und wurde kürzlich geändert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi2">
-      <label for="wifi2">WPA3 oder zumindest WPA2 Verschlüsselung ist aktiviert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi3">
-      <label for="wifi3">WPS (Wi-Fi Protected Setup) ist deaktiviert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi4">
-      <label for="wifi4">Router-Administrationspasswort wurde geändert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi5">
-      <label for="wifi5">SSID (Netzwerkname) gibt keine persönlichen Informationen preis</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi6">
-      <label for="wifi6">Firmware des Routers ist aktuell</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="wifi7">
-      <label for="wifi7">Gast-WLAN ist getrennt und hat eigene Sicherheitseinstellungen</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Antivirus & Malware-Schutz</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="av1">
-      <label for="av1">Antivirus-Software ist installiert und aktiviert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="av2">
-      <label for="av2">Antivirus ist auf dem neuesten Stand</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="av3">
-      <label for="av3">Regelmäßige Scans sind eingerichtet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="av4">
-      <label for="av4">Firewall ist aktiviert</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="av5">
-      <label for="av5">Browser-Adblocker ist installiert</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Phishing & Social Engineering</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="phish1">
-      <label for="phish1">E-Mail-Absender werden immer geprüft</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phish2">
-      <label for="phish2">Verdächtige Links werden nicht angeklickt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phish3">
-      <label for="phish3">Anhänge werden nur von bekannten Absendern geöffnet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phish4">
-      <label for="phish4">Immer auf verdächtige Grammatik- und Rechtschreibfehler geachtet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phish5">
-      <label for="phish5">Unaufgefordert erhaltene Anrufe mit Nachfrage überprüfen</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Netzwerk & Cloud-Sicherheit</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="cloud1">
-      <label for="cloud1">Cloud-Speicher ist verschlüsselt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="cloud2">
-      <label for="cloud2">Zugriffsrechte in Cloud-Diensten sind richtig gesetzt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="cloud3">
-      <label for="cloud3">VPN wird für öffentliche WLANs verwendet</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="cloud4">
-      <label for="cloud4">Port-Freigaben sind auf ein Minimum reduziert</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Physische Sicherheit</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="phys1">
-      <label for="phys1">Bildschirm sperrt sich automatisch nach Inaktivität</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phys2">
-      <label for="phys2">Geräte sind physisch gesichert (z.B. Kensington-Schloss)</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phys3">
-      <label for="phys3">Sensible Dokumente sind verschlossen aufbewahrt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="phys4">
-      <label for="phys4">Datenträger mit sensiblen Daten werden verschlüsselt</label>
-    </div>
-  </div>
-
-  <div class="category">
-    <h2 class="category-title">Zugriffsrechte & Berechtigungen</h2>
-    <div class="checklist-item">
-      <input type="checkbox" id="access1">
-      <label for="access1">Benutzerkonten haben nur nötige Berechtigungen</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="access2">
-      <label for="access2">Administrator-Konten sind klar definiert und begrenzt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="access3">
-      <label for="access3">Ehemalige Mitarbeiter-Zugriffe wurden entfernt</label>
-    </div>
-    <div class="checklist-item">
-      <input type="checkbox" id="access4">
-      <label for="access4">Regelmäßige Überprüfung der Berechtigungen</label>
-    </div>
-  </div>
-
-  <div class="info-box">
-    <h3>✅ Nächste Schritte</h3>
-    <p>Nach der Überprüfung sollten Sie alle nicht markierten Punkte angehen. Wenn Sie Hilfe bei der Umsetzung benötigen, kontaktieren Sie uns gerne für ein kostenloses Erstgespräch.</p>
-  </div>
-
-  <div class="footer">
-    <p><strong>Net-Evolution</strong> - IT-Dienstleistungen und gehostete Infrastruktur in Deutschland</p>
-    <p>Region Bad Kreuznach, Bingen, Stromberg</p>
-    <p>Telefon: <a href="tel:+4915679708019">+49 15679 708019</a> · E-Mail: <a href="mailto:info@net-evolution.de">info@net-evolution.de</a></p>
-    <p>Weinbergstraße 17, 55452 Dorsheim</p>
-    <p class="footer-copy">
-      © <span id="year"></span> Net-Evolution - Alle Rechte vorbehalten
-    </p>
-  </div>
-
-  <button class="print-btn no-print" onclick="window.print()">🖨️ Als PDF drucken</button>
+  <a href="https://wa.me/4915679708019?text=Hallo%2C%20ich%20habe%20eine%20Frage%20zu%20Ihren%20IT-Services" class="whatsapp-button" target="_blank" rel="noopener" aria-label="WhatsApp Kontakt">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+    <span class="whatsapp-text">WhatsApp</span>
+  </a>
 
   <script src="js/main.js"></script>
   <script src="js/checkliste.js"></script>
+
+  <div id="cookieBanner">
+    <div class="cookie-text">
+      Diese Seite nutzt technisch notwendige und optionale Dienste. <a href="datenschutz.html" target="_blank">Details im Datenschutz</a>.
+    </div>
+    <div class="cookie-buttons">
+      <button id="acceptCookies">Akzeptieren</button>
+      <button id="declineCookies">Ablehnen</button>
+    </div>
+  </div>
+  <script src="js/cookies.js"></script>
 </body>
 </html>
