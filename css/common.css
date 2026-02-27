@@ -1,8 +1,8 @@
 :root{
   /* Logo-Grün einheitlich auf der gesamten Seite */
-  --green: #0d9488;
-  --green-dark: #0d9488;
-  --green-hover: #0d9488;
+  --green: #29a854;
+  --green-dark: #29a854;
+  --green-hover: #29a854;
   --evo-gray: #64748b;
   --muted: #64748b;
   --text-primary: #0f172a;
@@ -156,14 +156,14 @@ body{
   background: var(--green);
   border: none;
   border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.35);
+  box-shadow: 0 2px 8px rgba(41, 168, 84, 0.35);
   transition: background var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
   pointer-events: auto;
   display: inline-block;
 }
 .video-hero-scroll:hover{
   background: var(--green-dark);
-  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.4);
+  box-shadow: 0 4px 12px rgba(41, 168, 84, 0.4);
 }
 .video-hero-scroll:focus{
   outline: none;

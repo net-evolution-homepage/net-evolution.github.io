@@ -18,7 +18,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   padding-bottom: 30px;
-  border-bottom: 3px solid #0d9488;
+  border-bottom: 3px solid #29a854;
 }
 
 .header h1 {
@@ -40,7 +40,7 @@ body {
 }
 
 .section h2 {
-  color: #0d9488;
+  color: #29a854;
   font-size: 1.25rem;
   margin: 0 0 20px 0;
   padding-bottom: 10px;
@@ -53,7 +53,7 @@ body {
   margin-bottom: 15px;
   padding: 12px;
   background: #f8fafc;
-  border-left: 4px solid #0d9488;
+  border-left: 4px solid #29a854;
   border-radius: 4px;
 }
 
@@ -63,7 +63,7 @@ body {
   margin-right: 15px;
   margin-top: 2px;
   flex-shrink: 0;
-  accent-color: #0d9488;
+  accent-color: #29a854;
 }
 
 .checklist-item label {
@@ -91,7 +91,7 @@ body {
   content: '';
   width: 6px;
   height: 20px;
-  background: #0d9488;
+  background: #29a854;
   border-radius: 2px;
 }
 
@@ -126,7 +126,7 @@ body {
 }
 
 .footer strong {
-  color: #0d9488;
+  color: #29a854;
   font-weight: 600;
 }
 
@@ -134,21 +134,21 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #0d9488;
+  background: #29a854;
   color: white;
   border: none;
   padding: 14px 24px;
   border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(13,148,136,0.35);
+  box-shadow: 0 8px 24px rgba(41,168,84,0.35);
   transition: all 0.3s ease;
   font-size: 15px;
 }
 
 .print-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(13,148,136,0.45);
+  box-shadow: 0 12px 32px rgba(41,168,84,0.45);
 }
 
 @media print {
@@ -164,7 +164,7 @@ body {
 }
 
 .header-top-link a {
-  color: #0d9488;
+  color: #29a854;
   text-decoration: none;
   font-weight: 600;
 }
@@ -175,7 +175,7 @@ body {
 }
 
 .footer a {
-  color: #0d9488;
+  color: #29a854;
 }
 
 .footer-copy {
