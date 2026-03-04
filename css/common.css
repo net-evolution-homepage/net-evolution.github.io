@@ -263,12 +263,13 @@ header{
   letter-spacing: -0.02em;
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 0.08em;
   line-height: 1.2;
   font-family: "Inter", system-ui, sans-serif;
 }
 .logo .net{ color: var(--green); }
-.logo .evo{ color: var(--text-secondary); margin-left: 0; }
+.logo .logo-hyphen{ color: var(--text-secondary); }
+.logo .evo{ color: var(--text-secondary); }
 .tagline{ color: var(--muted); font-size: 0.75rem; margin-top: 2px; letter-spacing: 0.02em; font-weight: 500; }
 nav{
   display: flex;
