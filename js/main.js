@@ -5,6 +5,10 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Stand-Jahr auf rechtlichen Seiten (z. B. AV-Vertrag) setzen
+  var legalStandYear = document.getElementById('legalStandYear');
+  if (legalStandYear) legalStandYear.textContent = new Date().getFullYear();
+
   // Startseite: Weißer Header schon beim ersten kleinen Scroll
   (function startpageHeaderSticky() {
     if (!document.body.classList.contains('startpage')) return;
