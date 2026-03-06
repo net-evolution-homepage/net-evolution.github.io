@@ -62,6 +62,30 @@ main{ padding: 24px 0 40px; min-height: 50vh; }
   min-width: 200px;
   width: 60%;
 }
+/* Tabellen (z. B. AV-Vertrag Anlage 2) */
+.main-content .table-wrap{
+  overflow-x: auto;
+  margin: 16px 0;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+}
+.main-content .legal-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+.main-content .legal-table th,
+.main-content .legal-table td{
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--card-border);
+}
+.main-content .legal-table th{
+  background: var(--bg-subtle);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.main-content .legal-table tr:last-child td{ border-bottom: none; }
 @media (max-width:900px){
   .main-content{ padding:24px; border-radius:var(--radius); }
   .main-content h1{ font-size:24px; }
