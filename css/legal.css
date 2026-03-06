@@ -57,6 +57,11 @@ main{ padding: 24px 0 40px; min-height: 50vh; }
 .main-content .widerrufsformular .form-line-signature{
   min-height: 2.5em;
 }
+.main-content .form-line-inline{
+  display: inline-block;
+  min-width: 200px;
+  width: 60%;
+}
 @media (max-width:900px){
   .main-content{ padding:24px; border-radius:var(--radius); }
   .main-content h1{ font-size:24px; }
