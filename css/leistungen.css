@@ -315,20 +315,6 @@ body:not(.startpage) main{ align-items: stretch; width: 100%; }
   min-width: 0;
 }
 .model-card-enterprise{ border-color: var(--card-border-hover); box-shadow: var(--shadow-card-hover); }
-.model-card-enterprise .model-card-title{ padding-right: 68px; }
-.model-badge{
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 4px 10px;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--green);
-  background: rgba(41, 168, 84, 0.1);
-  border-radius: 999px;
-}
 .model-enterprise-note{
   text-align: center;
   color: var(--text-secondary);
