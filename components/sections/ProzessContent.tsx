@@ -32,7 +32,7 @@ const steps = [
     paragraphs: [
       "Ich führe den Audit persönlich durch – eine Kombination aus automatisierten Tools und manueller Prüfung. Automatisierte Scans liefern eine breite Abdeckung, die manuelle Arbeit geht in die Tiefe und erkennt, was kein Scanner findet.",
       "Jeder Befund wird sofort klassifiziert und dokumentiert, während ich arbeite. Schweregrad, betroffene Systeme, technische Details – alles wird festgehalten. So entsteht keine Lücke zwischen Prüfung und Dokumentation.",
-      "Am Ende steht ein vollständiger, strukturierter Bericht mit allen Ergebnissen. Aber der Bericht ist nicht das Ende des Prozesses – er ist die Grundlage für das wichtigste: die persönliche Besprechung.",
+      "Am Ende steht ein vollständiger, strukturierter Bericht mit allen Ergebnissen. Aber der Bericht ist nicht das Ende des Prozesses – er ist die Grundlage für das Wichtigste: die persönliche Besprechung.",
     ],
   },
   {
