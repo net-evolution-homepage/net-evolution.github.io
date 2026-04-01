@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(export PATH=\"/c/Program Files/nodejs:/c/Users/marvi/AppData/Roaming/npm:$PATH\")",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(rm marvin-henrich.jpg)",
+      "Bash(mv Unbenannt.png marvin-henrich.png)",
+      "Bash(grep -l \"metadata\" /c/Users/marvi/iCloudDrive/Net-Evolution/Homepage/Neu/app/*/page.tsx /c/Users/marvi/iCloudDrive/Net-Evolution/Homepage/Neu/app/*/*/page.tsx)"
+    ]
+  }
+}
