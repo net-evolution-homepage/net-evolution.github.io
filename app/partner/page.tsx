@@ -86,7 +86,7 @@ export default function PartnerPage() {
             {[
               { num: "✓", color: "bg-[var(--color-accent-cyan)]", title: "Onboarding", desc: "Ich zeige Ihnen, wie Sie potenzielle Kunden erkennen." },
               { num: "1", color: "bg-[var(--color-accent-green)]", title: "Vermitteln", desc: "Per Intro, Weiterleitung oder gemeinsamen Call." },
-              { num: "2", color: "bg-[var(--color-accent-green)]", title: "Ich liefere", desc: "Erstgespräch bis Bericht – komplett." },
+              { num: "2", color: "bg-[var(--color-accent-green)]", title: "Ich übernehme", desc: "Erstgespräch bis Bericht – komplett." },
               { num: "3", color: "bg-[var(--color-accent-green)]", title: "Sie kassieren", desc: "15 % nach Zahlungseingang." },
             ].map((step, i) => (
               <div key={i} className="flex flex-col items-center text-center px-4 py-6 md:py-0">
