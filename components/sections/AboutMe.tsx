@@ -18,20 +18,20 @@ export default function AboutMe() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left: Photo — hidden on mobile */}
+          {/* Left: Photo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="hidden lg:block"
+            className="flex justify-center lg:justify-start"
           >
             <Image
               src="/images/marvin-henrich.png"
               alt="Marvin Henrich – IT Security Auditor"
               width={420}
               height={520}
-              className="rounded-xl object-cover"
+              className="rounded-xl object-cover max-w-[280px] lg:max-w-none"
               priority
             />
           </motion.div>
