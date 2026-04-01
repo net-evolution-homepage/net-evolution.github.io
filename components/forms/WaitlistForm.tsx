@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 
 const waitlistSchema = z.object({
   name: z.string().min(2, "Bitte geben Sie Ihren Namen ein."),
-  email: z.string().email("Bitte geben Sie eine gueltige E-Mail-Adresse ein."),
+  email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein."),
   company: z.string().optional(),
   dsgvo: z.boolean().refine((val) => val === true, {
-    message: "Sie muessen der Datenschutzerklaerung zustimmen.",
+    message: "Sie müssen der Datenschutzerklärung zustimmen.",
   }),
 });
 
@@ -62,12 +62,12 @@ export default function WaitlistForm() {
         setIsSuccess(true);
       } else {
         setSubmitError(
-          "Ein Fehler ist aufgetreten. Bitte versuchen Sie es spaeter erneut."
+          "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
         );
       }
     } catch {
       setSubmitError(
-        "Ein Fehler ist aufgetreten. Bitte versuchen Sie es spaeter erneut."
+        "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
       );
     } finally {
       setIsSubmitting(false);
@@ -95,7 +95,7 @@ export default function WaitlistForm() {
           Sie stehen auf der Warteliste!
         </h3>
         <p className="text-[var(--color-text-secondary)]">
-          Wir melden uns, sobald die Recovery &amp; Monitoring Suite verfuegbar
+          Ich melde mich, sobald die Recovery &amp; Monitoring Suite verfügbar
           ist.
         </p>
       </div>
@@ -189,14 +189,14 @@ export default function WaitlistForm() {
             {...register("dsgvo")}
           />
           <span className="text-xs text-[var(--color-text-secondary)] leading-relaxed">
-            Ich stimme zu, dass meine Daten zur Kontaktaufnahme bezueglich der
+            Ich stimme zu, dass meine Daten zur Kontaktaufnahme bezüglich der
             Recovery &amp; Monitoring Suite verarbeitet werden. Weitere
             Informationen finden Sie in unserer{" "}
             <a
               href="/datenschutz"
               className="text-[var(--color-accent-cyan)] underline underline-offset-2 hover:text-[var(--color-accent-green)] transition-colors"
             >
-              Datenschutzerklaerung
+              Datenschutzerklärung
             </a>
             . <span className="text-[var(--color-severity-critical)]">*</span>
           </span>

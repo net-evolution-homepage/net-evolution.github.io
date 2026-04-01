@@ -4,11 +4,11 @@ import WaitlistForm from "@/components/forms/WaitlistForm";
 export const metadata: Metadata = {
   title: "Recovery & Monitoring Suite – Warteliste",
   description:
-    "Tragen Sie sich in die Warteliste fuer die Recovery & Monitoring Suite von Net-Evolution ein. Automatisierte Wiederherstellung, Echtzeit-Monitoring und Compliance-Dashboards.",
+    "Tragen Sie sich in die Warteliste für die Recovery & Monitoring Suite von Net-Evolution ein. Automatisierte Wiederherstellung, Echtzeit-Monitoring und Compliance-Dashboards.",
   openGraph: {
     title: "Recovery & Monitoring Suite – Warteliste | Net-Evolution",
     description:
-      "Tragen Sie sich in die Warteliste fuer die Recovery & Monitoring Suite von Net-Evolution ein.",
+      "Tragen Sie sich in die Warteliste für die Recovery & Monitoring Suite von Net-Evolution ein.",
   },
 };
 
@@ -36,7 +36,7 @@ const features = [
   {
     title: "Echtzeit-Monitoring",
     description:
-      "Kontinuierliche Ueberwachung Ihrer gesamten IT-Infrastruktur mit sofortiger Anomalie-Erkennung.",
+      "Kontinuierliche Überwachung Ihrer gesamten IT-Infrastruktur mit sofortiger Anomalie-Erkennung.",
     icon: (
       <svg
         width="32"
@@ -55,7 +55,7 @@ const features = [
   {
     title: "Intelligentes Alerting",
     description:
-      "Kontextbasierte Benachrichtigungen, die relevante Vorfaelle priorisieren und Alert-Fatigue vermeiden.",
+      "Kontextbasierte Benachrichtigungen, die relevante Vorfälle priorisieren und Alert-Fatigue vermeiden.",
     icon: (
       <svg
         width="32"
@@ -75,7 +75,7 @@ const features = [
   {
     title: "Compliance-Dashboards",
     description:
-      "Uebersichtliche Dashboards fuer NIS2, ISO 27001 und DSGVO mit automatischem Compliance-Tracking.",
+      "Übersichtliche Dashboards für NIS2, ISO 27001 und DSGVO mit automatischem Compliance-Tracking.",
     icon: (
       <svg
         width="32"
@@ -96,7 +96,7 @@ const features = [
   {
     title: "Backup-Validierung",
     description:
-      "Automatische Pruefung der Backup-Integritaet und Wiederherstellbarkeit mit detaillierten Reports.",
+      "Automatische Prüfung der Backup-Integrität und Wiederherstellbarkeit mit detaillierten Reports.",
     icon: (
       <svg
         width="32"
@@ -116,7 +116,7 @@ const features = [
   {
     title: "Incident-Timeline",
     description:
-      "Lueckenlose Dokumentation aller Sicherheitsvorfaelle mit forensischer Timeline-Analyse.",
+      "Lückenlose Dokumentation aller Sicherheitsvorfälle mit forensischer Timeline-Analyse.",
     icon: (
       <svg
         width="32"
@@ -151,9 +151,9 @@ export default function WaitelistePage() {
             <span className="text-[var(--color-accent-cyan)]">Suite</span>
           </h1>
           <p className="mt-6 text-lg md:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed">
-            Das kommende All-in-One-Tool von Net-Evolution fuer automatisierte
+            Das kommende All-in-One-Tool von Net-Evolution für automatisierte
             Wiederherstellung, Echtzeit-Monitoring und Compliance-Management.
-            Entwickelt fuer Unternehmen, die IT-Sicherheit ernst nehmen.
+            Entwickelt für Unternehmen, die IT-Sicherheit ernst nehmen.
           </p>
           <div className="mt-8 h-1 w-16 rounded-full bg-[var(--color-accent-cyan)] mx-auto" />
         </div>
@@ -167,7 +167,7 @@ export default function WaitelistePage() {
               Geplante Features
             </h2>
             <p className="mt-4 text-[var(--color-text-secondary)] text-lg max-w-2xl mx-auto">
-              Ein Werkzeug, das die Luecke zwischen Monitoring, Recovery und
+              Ein Werkzeug, das die Lücke zwischen Monitoring, Recovery und
               Compliance schliesst.
             </p>
           </div>
@@ -202,8 +202,8 @@ export default function WaitelistePage() {
               Auf die Warteliste setzen
             </h2>
             <p className="mt-4 text-[var(--color-text-secondary)] leading-relaxed">
-              Sichern Sie sich fruehzeitigen Zugang zur Recovery &amp; Monitoring
-              Suite. Wir informieren Sie, sobald die erste Version verfuegbar ist.
+              Sichern Sie sich frühzeitigen Zugang zur Recovery &amp; Monitoring
+              Suite. Ich informiere Sie, sobald die erste Version verfügbar ist.
             </p>
           </div>
           <WaitlistForm />

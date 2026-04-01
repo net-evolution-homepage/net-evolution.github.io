@@ -23,6 +23,7 @@ export const footerNavigation = {
     { label: "Blog", href: "/blog" },
     { label: "IT-Sicherheitscheckliste", href: "/checkliste" },
     { label: "Kontakt", href: "/kontakt" },
+    { label: "Partner werden", href: "/partner" },
   ],
   rechtliches: [
     { label: "Impressum", href: "/impressum" },

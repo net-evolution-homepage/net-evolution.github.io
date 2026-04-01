@@ -2,11 +2,11 @@
 
 @theme {
   /* Light base colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
-  --color-bg-tertiary: #f1f5f9;
+  --color-bg-primary: #fafafa;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-tertiary: #eeeeee;
   --color-bg-card: #ffffff;
-  --color-bg-card-hover: #f8fafc;
+  --color-bg-card-hover: #f7f7f7;
 
   /* Accent colors */
   --color-accent-green: #00875a;
@@ -21,13 +21,13 @@
   --color-severity-low: #0891b2;
   --color-severity-info: #7c3aed;
 
-  /* Text colors */
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #334155;
-  --color-text-muted: #64748b;
+  /* Text colors — neutral grays */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #404040;
+  --color-text-muted: #6b6b6b;
 
   /* Border */
-  --color-border-default: #e2e8f0;
+  --color-border-default: #e5e5e5;
   --color-border-accent: #00875a33;
 
   /* Fonts */
@@ -55,8 +55,8 @@
   }
 
   ::selection {
-    background-color: #00875a22;
-    color: #00553a;
+    background-color: #00875a20;
+    color: #004d33;
   }
 
   /* Scrollbar styling */
@@ -69,12 +69,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
+    background: #c8c8c8;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background: #9a9a9a;
   }
 }
 

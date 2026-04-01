@@ -24,8 +24,19 @@ export function initializeConsent() {
   });
 }
 
+function ensureGtag() {
+  if (typeof window === "undefined") return;
+  if (!window.gtag) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function (...args: unknown[]) {
+      window.dataLayer.push(args);
+    };
+  }
+}
+
 export function grantConsent() {
   if (typeof window === "undefined") return;
+  ensureGtag();
 
   window.gtag("consent", "update", {
     analytics_storage: "granted",
@@ -49,6 +60,7 @@ export function grantConsent() {
 
 export function denyConsent() {
   if (typeof window === "undefined") return;
+  ensureGtag();
 
   window.gtag("consent", "update", {
     analytics_storage: "denied",

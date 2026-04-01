@@ -95,7 +95,7 @@ export default function ContactForm() {
           Nachricht gesendet
         </h3>
         <p className="mt-2 text-sm text-[var(--color-text-secondary)]">
-          Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden
+          Vielen Dank für Ihre Anfrage. Ich melde mich innerhalb von 24 Stunden
           bei Ihnen.
         </p>
         <button

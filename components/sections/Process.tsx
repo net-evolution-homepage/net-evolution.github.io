@@ -39,18 +39,18 @@ const containerVariants = {
 };
 
 const stepVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, x: -40 },
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: { duration: 0.5, ease: "easeOut" as const },
   },
 };
 
 export default function Process() {
   return (
-    <section className="relative py-24 md:py-32 bg-[var(--color-bg-secondary)]">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="bg-[var(--color-bg-secondary)] py-24 md:py-32">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,84 +59,42 @@ export default function Process() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <span className="inline-block text-sm font-semibold tracking-wide uppercase text-[var(--color-accent-green)] mb-3">
+          <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-[var(--color-accent-green)]">
             Ablauf
           </span>
-          <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
+          <h2 className="font-[family-name:var(--font-display)] text-3xl font-bold text-[var(--color-text-primary)] md:text-4xl">
             In vier Schritten zum Ergebnis
           </h2>
         </motion.div>
 
-        {/* Desktop: horizontal stepper */}
+        {/* Horizontal stepper */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="hidden md:grid md:grid-cols-4 md:gap-0 relative"
+          className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6"
         >
-          {/* Connecting line behind circles */}
-          <div className="absolute top-[24px] left-[calc(12.5%)] right-[calc(12.5%)] h-0.5 bg-[var(--color-accent-green)] opacity-30" />
+          {/* Connecting line desktop */}
+          <div className="hidden lg:block absolute top-6 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-0.5 bg-[var(--color-accent-green)]/20" />
 
           {steps.map((step) => (
             <motion.div
               key={step.number}
               variants={stepVariants}
-              className="flex flex-col items-center text-center px-4"
+              className="flex flex-col items-center text-center"
             >
-              {/* Number circle */}
-              <div className="relative z-10 w-12 h-12 rounded-full border-2 border-[var(--color-accent-green)] bg-white flex items-center justify-center">
+              <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-[var(--color-accent-green)] bg-white">
                 <span className="font-[family-name:var(--font-display)] text-sm font-bold text-[var(--color-accent-green)]">
                   {step.number}
                 </span>
               </div>
-
-              {/* Content */}
-              <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-[var(--color-text-primary)] mt-5">
+              <h3 className="mt-5 font-[family-name:var(--font-display)] text-base font-semibold text-[var(--color-text-primary)]">
                 {step.title}
               </h3>
-              <p className="mt-2 text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                 {step.description}
               </p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Mobile: vertical stepper */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="md:hidden relative"
-        >
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              variants={stepVariants}
-              className="relative flex gap-6"
-            >
-              {/* Left column: number + line */}
-              <div className="flex flex-col items-center">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-[var(--color-accent-green)] bg-white flex items-center justify-center">
-                  <span className="font-[family-name:var(--font-display)] text-sm font-bold text-[var(--color-accent-green)]">
-                    {step.number}
-                  </span>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="w-0.5 flex-1 bg-[var(--color-accent-green)] opacity-30" />
-                )}
-              </div>
-
-              {/* Right column: content */}
-              <div className="pb-10">
-                <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold text-[var(--color-text-primary)] mt-2.5">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-lg">
-                  {step.description}
-                </p>
-              </div>
             </motion.div>
           ))}
         </motion.div>
@@ -154,7 +112,7 @@ export default function Process() {
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-accent-green)] hover:text-[var(--color-accent-green-dim)] transition-colors"
           >
             Mehr zum Prozess
-            <span aria-hidden="true">&rarr;</span>
+            <span aria-hidden="true">→</span>
           </Link>
         </motion.div>
       </div>
