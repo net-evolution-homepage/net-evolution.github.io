@@ -18,30 +18,13 @@ export default function AboutMe() {
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Left: Photo */}
+          {/* Left: Text content */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center lg:justify-start"
-          >
-            <Image
-              src="/images/marvin-henrich.png"
-              alt="Marvin Henrich – IT Security Auditor"
-              width={420}
-              height={520}
-              className="rounded-xl object-cover max-w-[280px] lg:max-w-none"
-              priority
-            />
-          </motion.div>
-
-          {/* Right: Text content */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            className="order-2 lg:order-1"
           >
             <span className="mb-3 block text-xs font-semibold uppercase tracking-widest text-[var(--color-text-secondary)]">
               &Uuml;ber mich
@@ -99,6 +82,24 @@ export default function AboutMe() {
                 ))}
               </div>
             </div>
+          </motion.div>
+
+          {/* Right: Photo */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
+          >
+            <Image
+              src="/images/marvin-henrich.png"
+              alt="Marvin Henrich – IT Security Auditor"
+              width={420}
+              height={520}
+              className="rounded-xl object-cover max-w-[280px] lg:max-w-none"
+              priority
+            />
           </motion.div>
         </div>
       </div>
