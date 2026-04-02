@@ -93,7 +93,7 @@ export default function AboutMe() {
             className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <Image
-              src="/images/marvin-henrich.png"
+              src="/images/marvinhenrich.png"
               alt="Marvin Henrich – IT Security Auditor"
               width={420}
               height={520}
